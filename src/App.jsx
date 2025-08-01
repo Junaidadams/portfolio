@@ -18,6 +18,12 @@ function App() {
       </SectionWrapper>
       <SectionWrapper id="projects">
         <div className="w-11/12 h-11/12 border-black border-[1px] flex flex-col  rounded-4xl">
+          <div className=" font-panchang font-extralight text-mainBlack text-3xl md:text-4xl p-4 sm:p-6 md:p-8 lg:p-10 dark:bg-mainBlack dark:text-mainWhite w-fit rounded-r-3xl">
+            <h1>Projects</h1>
+            <p className="text-base font-semibold">
+              A few of my recent projects.
+            </p>
+          </div>
           <ProjectTile />
         </div>
       </SectionWrapper>
