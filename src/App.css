@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Satoshi", "sans-serif";
+  --color-mainBlack: #0e0f0b;
+  --color-viridian: #5b9279;
+  --color-celadon: #8fcb9b;
+  --color-mainWhite: #fffdfd;
+  --font-zodiak: "Zodiak", "sans-serif";
+  --font-panchang: "Panchang", sans-serif;
+}
