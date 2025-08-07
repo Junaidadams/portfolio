@@ -35,7 +35,7 @@ const Navbar = () => {
           <li key={link.key} className="">
             <a
               href={link.link}
-              className=" py-2 px-3 rounded-full dark:text-white mb-2 dark:hover:text-celadon font-semibold"
+              className=" py-2 px-3 rounded-full dark:text-white mb-2 dark:hover:text-gray-300 font-panchang font-light"
             >
               {link.name}
             </a>
@@ -59,7 +59,7 @@ const Navbar = () => {
             exit="closed"
             variants={variants}
             transition={{ duration: 0.5 }}
-            className="absolute top-0 left-0 w-full shadow-lg flex flex-col space-y-6 px-4 pt-2 pb-10 capitalize md:hidden z-30 bg-[#f5f5f5] bg-opacity-95 "
+            className="absolute top-0 left-0 w-full shadow-lg flex flex-col space-y-6 pb-10 capitalize md:hidden z-30 bg-mainWhite dark:bg-mainBlack bg-opacity-95 border-b-mainWhite border"
           >
             <div className="md:hidden ">
               <Toggle isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
@@ -68,7 +68,7 @@ const Navbar = () => {
               <a
                 key={link.key}
                 href={link.link}
-                className="text-slate-800 font-semibold tracking-wider m-auto "
+                className="text-mainBlack dark:text-mainWhite font-panchang tracking-tighter m-auto font-light "
                 onClick={() => setIsOpen(false)} // Close menu on link click
               >
                 {link.name}

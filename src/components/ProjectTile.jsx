@@ -1,105 +1,174 @@
 import { projects } from "../../constants";
 import { useState } from "react";
 
-import { motion } from "framer-motion";
-
-import { LuFolderGit2, LuX } from "react-icons/lu";
-import { GoLinkExternal } from "react-icons/go";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { AnimatePresence, motion } from "framer-motion";
+import { BsChevronCompactUp } from "react-icons/bs";
 
 export const ProjectTile = () => {
-  const [focused, setFocused] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(0);
 
-  const handleClose = () => {
-    setFocused(null);
+  const isProjectOrLink = ({ project }) => {
+    if (project.github || project.link) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+  const containerVariants = {
+    open: {
+      height: "auto",
+      transition: {
+        duration: 0.3,
+      },
+    },
+    closed: {
+      height: 0,
+      transition: {
+        duration: 0.3,
+      },
+    },
+  };
+
+  const contentVariants = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        delay: 0.3, // match container animation duration
+        duration: 0.2,
+      },
+    },
+  };
+
+  const toggleAccordion = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
   };
 
   return (
-    <div className=" m-auto">
-      <div className=" grid grid-cols-1  md:grid-cols-2">
-        {projects.map((project) => (
-          <motion.div
-            key={project.key}
-            whileHover={{ x: 2 }}
-            onClick={() => setFocused(project)}
-            className="relative hover:cursor-pointer md:mx-2" // Ensure this div is positioned relative to its content
-          >
-            {project.img && (
-              <div className="bg-gradient-to-b from-gray-500 to-gray-800 shadow-lg p-[1px] relative my-2">
-                <div
-                  className="w-full h-36 bg-cover bg-center rounded-sm "
-                  style={{
-                    backgroundImage: `url(${project.img})`,
-                  }}
-                >
-                  <div className="w-full h-full backdrop-blur-xl">
-                    <img
-                      src={project.img}
-                      className="object-contain h-36 mx-auto"
-                    />
-                    <h1 className="absolute bottom-1 left-1 text-white text-base font-semibold z-1- backdrop-blur-lg bg-[#0000004b] p-1 rounded-sm bg-opacity-50">
-                      {project.name}
-                    </h1>
-                  </div>
-                </div>
-              </div>
-            )}
-          </motion.div>
-        ))}
-      </div>
-      {focused && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-10"
-          onClick={handleClose}
-        >
-          <div
-            className="relative"
-            onClick={(e) => e.stopPropagation()} // Prevents closing when clicking inside the container
-          >
-            {/* Container matches image size */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.8 }}
-              className="relative rounded-sm bg-[#f5f5f5] inline-block w-[90vw] h-[70vh]"
+    <div className="flex w-full">
+      <div className=" px-4 md:px-8">
+        {projects.map((project, index) => (
+          <div key={project.key} className="mb-5 mx">
+            <button
+              onClick={() => toggleAccordion(index)}
+              className="font font-panchang text-left dark:text-mainWhite hover:cursor-pointer"
             >
-              <img
-                src={focused.img}
-                alt={focused.name}
-                className="w-full h-full object-contain rounded"
-              />
-              {/* Button positioned relative to the image */}
-              {focused.link && (
-                <a
-                  href={focused.link}
-                  target="_blank"
-                  className={`absolute top-2 ${
-                    focused.github ? "right-[155px]" : "right-20"
-                  } text-white text-2xl font-bold bg-black bg-opacity-70 shadow-2xl px-4 py-2 rounded hover:bg-opacity-75`}
+              {project.name}
+            </button>
+            <AnimatePresence>
+              {activeIndex === index && (
+                <motion.div
+                  initial="closed"
+                  animate="open"
+                  exit="closed"
+                  variants={containerVariants}
                 >
-                  <GoLinkExternal />
-                </a>
+                  <motion.div
+                    initial="hidden"
+                    animate="visible"
+                    exit="hidden"
+                    variants={contentVariants}
+                    className=" text-gray-700 dark:text-gray-300 flex space-y-1 flex-col lg:flex-row lg:space-x-9"
+                  >
+                    <div className="sm:max-w-[420px] lg:my-auto lg:h-fit">
+                      <p className="lg:hidden mb-2">{project.shortDesc}</p>
+                      <p className="hidden lg:block">{project.longDesc}</p>
+                      <div className="flex flex-row mb-2">
+                        <div className="lg:hidden">
+                          {project.tags.map(({ key, name, icon: Icon }) => (
+                            <span
+                              key={key}
+                              className="text-xs border border-black dark:border-mainWhite dark:text-mainWhite px-2 py-1 sm:mr-2 mr-1"
+                            >
+                              {name} <Icon className="inline-block ml-[1px]" />
+                            </span>
+                          ))}
+                        </div>
+                        <div className="flex space-x-1 sm:space-x-2 lg:hidden">
+                          {project.github && (
+                            <a
+                              href={project.github}
+                              target="_blank"
+                              className="text-xs border border-black dark:border-mainWhite dark:text-mainWhite px-2 py-1"
+                            >
+                              <FaGithub />
+                            </a>
+                          )}
+                          {project.link && (
+                            <a
+                              href={project.link}
+                              target="_blank"
+                              className="text-xs border border-black dark:border-mainWhite dark:text-mainWhite px-2 py-1"
+                            >
+                              <FaExternalLinkAlt strokeWidth={1} />
+                            </a>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                    <div className="hidden lg:flex flex-col space-y-2">
+                      {" "}
+                      <h1 className="text-sm font-panchang text-left dark:text-mainWhite">
+                        Built with:
+                      </h1>
+                      {project.tags.map(({ key, name, icon: Icon }) => (
+                        <span
+                          key={key}
+                          className="text-xs border border-black dark:border-mainWhite dark:text-mainWhite px-2 py-1 mr-2"
+                        >
+                          {name} <Icon className="inline-block ml-1" />
+                        </span>
+                      ))}
+                      {isProjectOrLink({ project }) && (
+                        <div className="flex flex-col space-y-2 mt-2">
+                          <h1 className="text-sm font-panchang text-left dark:text-mainWhite">
+                            Find here:
+                          </h1>
+                          <div className="flex space-x-2">
+                            {project.github && (
+                              <a
+                                href={project.github}
+                                target="_blank"
+                                className="text-xs border border-black dark:border-mainWhite dark:text-mainWhite px-2 py-1"
+                              >
+                                <FaGithub />
+                              </a>
+                            )}
+                            {project.link && (
+                              <a
+                                href={project.link}
+                                target="_blank"
+                                className="text-xs border border-black dark:border-mainWhite dark:text-mainWhite px-2 py-1"
+                              >
+                                <FaExternalLinkAlt strokeWidth={1} />
+                              </a>
+                            )}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                    <img
+                      className="my-auto max-w-[375 sm:max-w-[420px] border border-black dark:border-mainWhite"
+                      src={project.img}
+                    />
+                    <button
+                      onClick={() => toggleAccordion(index)}
+                      className="hover:cursor-pointer hover  text-left"
+                    >
+                      <BsChevronCompactUp className="mx-auto" />
+                    </button>
+                  </motion.div>
+                </motion.div>
               )}
-
-              {focused.github && (
-                <a
-                  href={focused.github}
-                  target="_blank"
-                  className="absolute top-2 right-20 text-white text-2xl font-bold bg-black bg-opacity-70 shadow-2xl px-4 py-2 rounded hover:bg-opacity-75"
-                >
-                  <LuFolderGit2 />
-                </a>
-              )}
-
-              <button
-                className="absolute top-2 right-2 text-white text-2xl font-bold bg-black bg-opacity-70 shadow-2xl px-4 py-2 rounded hover:bg-opacity-75"
-                onClick={handleClose}
-              >
-                <LuX />
-              </button>
-            </motion.div>
+            </AnimatePresence>
           </div>
-        </div>
-      )}
+        ))}
+        <div className="flex items-center"></div>
+      </div>
     </div>
   );
 };

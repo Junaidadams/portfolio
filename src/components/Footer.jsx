@@ -11,18 +11,18 @@ const Footer = () => {
           <motion.li
             whileHover={{ y: -1 }}
             key={link.key}
-            className="text-viridian mb-2 hover:text-celadon"
+            className="text-mainBlack hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-100 my-2"
           >
             <a href={link.link}>{link.name}</a>
           </motion.li>
         ))}
       </ul>
-      <ul className="my-auto mr-auto pl-6 text-periwinkle border-l border-viridian">
+      <ul className="my-auto mr-auto pl-6 text-periwinkle border-l border-mainBlack dark:border-mainWhite">
         {socials.map(({ key, name, link, logo: Logo }) => (
           <motion.li
             whileHover={{ y: -1 }}
             key={key}
-            className="text-viridian mb-2 hover:text-celadon"
+            className="text-mainBlack dark:text-slate-300 dark:hover:text-slate-100 my-2"
           >
             <a href={link} className="flex space-x-2 ">
               <Logo className="my-auto" />

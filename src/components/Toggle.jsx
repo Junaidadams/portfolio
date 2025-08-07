@@ -1,19 +1,27 @@
 import PropTypes from "prop-types";
 
 import { LuAlignLeft, LuX } from "react-icons/lu";
+import { RiMenuUnfold2Line } from "react-icons/ri";
+import { RiMenuUnfoldLine } from "react-icons/ri";
 
 const Toggle = ({ isOpen, onClick }) => {
   return (
     <button
       onClick={onClick}
-      className={`p-1 rounded-full text-black  
+      className={`p-[1px] rounded-full text-black dark:text-mainWhite  
       `}
       aria-label="Toggle menu"
     >
       {isOpen ? (
-        <LuX className="h-6 w-6 " />
+        <RiMenuUnfold2Line
+          style={{ fontWeight: 100 }}
+          className="h-6 w-6 font-thin"
+        />
       ) : (
-        <LuAlignLeft className="h-6 w-6" />
+        <RiMenuUnfoldLine
+          style={{ fontWeight: 100 }}
+          className="h-6 w-6 font-thin"
+        />
       )}
     </button>
   );

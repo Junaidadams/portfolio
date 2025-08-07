@@ -8,6 +8,15 @@ import nikeImage from "/projects/nike.png";
 import newsletterclubImage from "/projects/newsletterclub.png";
 import roob from "/projects/roob.png";
 
+import { SiPassport, SiVite } from "react-icons/si";
+import { SiNextdotjs, SiSanity } from "react-icons/si";
+import { TbBrandThreejs } from "react-icons/tb";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { SiExpress } from "react-icons/si";
+import { FaLinkedin, FaGithub, FaHtml5 } from "react-icons/fa";
+import { FaReact } from "react-icons/fa";
+import { DiDjango, DiMongodb, DiMysql, DiNodejs } from "react-icons/di";
+
 export const websiteInformation = [
   {
     name: "Roob",
@@ -17,17 +26,17 @@ export const websiteInformation = [
     socials: [
       {
         key: 1,
-        name: "Instagram",
-        link: "/https://www.instagram.com/onlineroob?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
-        logo: BsInstagram,
-        accountName: "onlineroob",
+        name: "LinkedIn",
+        link: "https://www.linkedin.com/in/junaid-adams-30b848211/",
+        logo: FaLinkedin,
+        accountName: "",
       },
       {
         key: 2,
-        name: "Discord",
-        link: "https://discord.com/users/roob#7254",
-        logo: IoLogoDiscord,
-        accountName: "roob#7254",
+        name: "Github",
+        link: "https://github.com/Junaidadams",
+        logo: FaGithub,
+        accountName: "",
       },
     ],
   },
@@ -68,7 +77,10 @@ export const projects = [
     bgColor: "#fff",
     link: "https://roob.online/",
     github: "https://github.com/Junaidadams/roob",
-    tags: ["Vite", "Sanity.io"],
+    tags: [
+      { key: 1, name: "Vite", icon: SiVite },
+      { key: 2, name: "Sanity.io", icon: SiSanity },
+    ],
   },
   {
     key: "2",
@@ -81,7 +93,10 @@ export const projects = [
     bgColor: "#7c3aed ",
     link: "https://thenewsletterclub.co",
     github: "https://github.com/TheNEwsletterclub/newlsetterclubbackend",
-    tags: ["Vite", "Express"],
+    tags: [
+      { key: 1, name: "Vite", icon: SiVite },
+      { key: 2, name: "Express", icon: SiExpress },
+    ],
   },
   {
     key: "3",
@@ -94,7 +109,11 @@ export const projects = [
     bgColor: "#07080b",
     link: "",
     github: "",
-    tags: ["NextJs", "CMS"],
+    tags: [
+      { key: 1, name: "Next.js", icon: SiNextdotjs },
+      { key: 2, name: "TailwindCSS", icon: RiTailwindCssFill },
+      { key: 3, name: "Sanity.io", icon: SiSanity },
+    ],
   },
   {
     key: "4",
@@ -108,7 +127,7 @@ export const projects = [
 
     link: "https://codesandbox.io/p/sandbox/weather-app-fpv85k",
     github: "https://github.com/Junaidadams/Weather-App",
-    tags: ["Vite", "API"],
+    tags: [{ key: 1, name: "Vite", icon: SiVite }],
   },
   {
     key: "5",
@@ -122,13 +141,16 @@ export const projects = [
 
     link: "",
     github: "",
-    tags: ["Vite", "ThreeJS"],
+    tags: [
+      { key: 1, name: "Vite", icon: SiVite },
+      { key: 2, name: "ThreeJS", icon: TbBrandThreejs },
+    ],
   },
   {
     key: "6",
     name: "One to Ten",
     shortDesc:
-      "A sleek, minimalist quiz game where all answers range from one to ten. Perfect for quick entertainment and challenging your quick-thinking skills!",
+      "A sleek, minimalist quiz game, perfect for quick entertainment and challenging your quick-thinking skills!",
     longDesc:
       "Introducing a quiz game where all answers range from one to ten. Designed with a minimalist, sleek interface, it offers simple and engaging gameplay. Perfect for passing the time, this game provides an enjoyable way to challenge your quick-thinking skills. Dive in and have fun whenever you have a few moments to spare!",
     img: oneToTenImage,
@@ -136,7 +158,7 @@ export const projects = [
 
     link: "https://www.1210.co.za",
     github: "https://github.com/Junaidadams/One-to-Ten",
-    tags: ["Vite"],
+    tags: [{ key: 1, name: "Vite", icon: SiVite }],
   },
   {
     key: "7",
@@ -149,19 +171,87 @@ export const projects = [
     bgColor: "#fff",
     link: "",
     github: "",
-    tags: ["Vite", "Tailwind"],
+    tags: [
+      { key: 1, name: "Vite", icon: SiVite },
+      { key: 2, name: "Tailwind", icon: RiTailwindCssFill },
+    ],
   },
-  // {
-  //   key: "7",
-  //   name: "roob online",
-  //   shortDesc:
-  //     "A cosy, inviting website showcasing the commission pieces made by roob the digital artist.",
-  //   longDesc:
-  //     "A cosy, inviting website showcasing the commission pieces made by roob the digital artist. Complete with it's own CMS and contact form, this website is what I recommend for customers in similar service-related fields",
-  //   img: nikeImage,
-  //   bgColor: "#fff",
-  //   link: "",
-  //   github: "",
-  //   tags: ["Vite", "Sanity.io"],
-  // },
+];
+
+export const frontendTechnologies = [
+  {
+    key: "1",
+    name: "Next.js",
+    shortDesc:
+      "React-based framework for building full-stack web applications.",
+    img: SiNextdotjs,
+    link: "https://nextjs.org/",
+  },
+  {
+    key: "2",
+    name: "React",
+    shortDesc: "A JavaScript library for building interactive UIs.",
+    img: FaReact,
+    link: "https://reactjs.org/",
+  },
+  {
+    key: "3",
+    name: "HTML & CSS",
+    shortDesc: "Core web technologies for structuring and styling web content.",
+    img: FaHtml5, // or a combined HTML+CSS image
+    link: "https://developer.mozilla.org/en-US/docs/Web",
+  },
+  {
+    key: "4",
+    name: "Tailwind CSS",
+    shortDesc: "Utility-first CSS framework for custom UIs.",
+    img: RiTailwindCssFill,
+    link: "https://tailwindcss.com/",
+  },
+  {
+    key: "5",
+    name: "Vite",
+    shortDesc: "Lightning-fast frontend tooling for modern web projects.",
+    img: SiVite,
+    link: "https://vitejs.dev/",
+  },
+];
+
+export const backendTechnologies = [
+  {
+    key: "1",
+    name: "Django",
+    shortDesc: "High-level Python framework for clean, rapid web development.",
+    img: DiDjango,
+    link: "https://www.djangoproject.com/",
+  },
+  {
+    key: "2",
+    name: "Node.js & Express",
+    shortDesc:
+      "JavaScript runtime and web framework for building APIs and servers.",
+    img: DiNodejs, // or a custom combined image
+    link: "https://nodejs.org/",
+  },
+  {
+    key: "3",
+    name: "MongoDB",
+    shortDesc: "NoSQL database for flexible, document-oriented data storage.",
+    img: DiMongodb,
+    link: "https://www.mongodb.com/",
+  },
+  {
+    key: "4",
+    name: "MySQL",
+    shortDesc: "Relational database for structured data management.",
+    img: DiMysql,
+    link: "https://www.mysql.com/",
+  },
+  {
+    key: "5",
+    name: "Passport.js",
+    shortDesc: "Middleware for authentication in Node.js applications.",
+    img: SiPassport,
+    link: "http://www.passportjs.org/",
+  },
 ];
