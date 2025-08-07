@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { frontendTechnologies, backendTechnologies } from "../../constants";
+import { Tooltip } from "react-tooltip";
 
 const TechStack = () => {
-  const [activeFrontendIndex, setActiveFrontendIntex] = useState(0);
-  const [activeBackendIndex, setActiveBackendIntex] = useState(0);
+  const [activeFrontendIndex, setActiveFrontendIntex] = useState(null);
+  const [activeBackendIndex, setActiveBackendIntex] = useState(null);
   const [activeCategory, setActiveCategory] = useState("frontend");
 
   const containerVariants = {
@@ -29,104 +30,162 @@ const TechStack = () => {
     visible: {
       opacity: 1,
       transition: {
-        delay: 0.3,
+        delay: 0.3, // match container animation duration
         duration: 0.2,
       },
     },
   };
 
-  const toggleAccordion = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
-
   return (
     <div className="flex w-full">
-      <div className=" px-4 md:px-8">
-        <h1 className="font font-panchang text-left dark:text-mainWhite ">
-          What I use
-        </h1>
+      <div className="px-4 md:px-8 flex flex-col">
+        <h1 className="font font-panchang text-left dark:text-mainWhite"></h1>
+
+        {/* Frontend Button */}
         <button
-          className="font-semibold font-panchang text-left dark:text-mainWhite "
-          onClick={() => setActiveCategory("frontend")}
+          className={`font-semibold font-panchang  text-left p-1 mb-1 ${
+            activeCategory === "frontend"
+              ? "bg-mainBlack text-mainWhite dark:bg-mainWhite dark:text-mainBlack"
+              : ""
+          }`}
+          onClick={() =>
+            setActiveCategory(activeCategory === "frontend" ? "" : "frontend")
+          }
         >
-          Frontend
+          Frontend {activeCategory === "frontend" ? "▲" : "▼"}
         </button>
-        <AnimatePresence>
-          <motion.div
-            initial="closed"
-            animate="open"
-            exit="closed"
-            variants={containerVariants}
-            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-1"
-          >
-            {activeCategory === "frontend" &&
-              frontendTechnologies.map(
-                ({ key, name, shortDesc, img: Image, link }) => (
+
+        {/* Frontend Technologies */}
+        <AnimatePresence mode="wait">
+          {activeCategory === "frontend" && (
+            <motion.div
+              key="frontend"
+              initial="closed"
+              animate="open"
+              exit="closed"
+              variants={containerVariants}
+              className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-1"
+            >
+              {frontendTechnologies.map(
+                ({ key, name, shortDesc, img: Image }) => (
                   <motion.div
+                    data-tooltip-anchor={`frontend-${key}`}
+                    key={key}
                     initial="hidden"
                     animate="visible"
                     exit="hidden"
                     variants={contentVariants}
-                    onClick={() => setActiveFrontendIntex(key)}
-                    key={key}
-                    className={`border border-mainBlack dark:border-mainWhite p-1 md:p-3 text-mainBlack dark:text-mainWhite flex flex-col ${
+                    onClick={() =>
+                      setActiveFrontendIntex((prev) =>
+                        prev === key ? null : key
+                      )
+                    }
+                    className={`border border-mainBlack dark:border-mainWhite p-1 md:p-3 flex flex-col cursor-pointer transition duration-500 ${
                       activeFrontendIndex === key
-                        ? "bg-mainBlack text-mainWhite dark:bg-mainWhite dark:text-mainBlack transition-all duration-400"
-                        : ""
+                        ? "bg-mainBlack dark:bg-mainWhite text-mainWhite dark:text-mainBlack"
+                        : "text-mainBlack dark:text-mainWhite"
                     }`}
                   >
-                    <div className="flex">
-                      <Image className="w-5 h-6 " />
+                    <div className="flex flex-col">
+                      <Image className="w-5 h-6" />
                       <h3 className="font-panchang tracking-tight text-xs">
                         {name}
                       </h3>
                     </div>
-                    {activeFrontendIndex === key && (
-                      <p className="text-xs text-gray-500 dark:text-gray-400">
-                        {shortDesc}
-                      </p>
-                    )}
                   </motion.div>
                 )
               )}
-          </motion.div>
+            </motion.div>
+          )}
         </AnimatePresence>
+
+        {/* Backend Button */}
         <button
-          className="font-semibold font-panchang text-left dark:text-mainWhite "
-          onClick={() => setActiveCategory("backend")}
+          className={`font-semibold font-panchang text-left p-1 mb-1 ${
+            activeCategory === "backend"
+              ? "bg-mainBlack text-mainWhite dark:bg-mainWhite dark:text-mainBlack"
+              : ""
+          }`}
+          onClick={() =>
+            setActiveCategory(activeCategory === "backend" ? "" : "backend")
+          }
         >
-          Backend
+          Backend {activeCategory === "backend" ? "▲" : "▼"}
         </button>
-        <AnimatePresence>
-          <motion.div
-            initial="closed"
-            animate="open"
-            exit="closed"
-            variants={containerVariants}
-            className="grid grid-cols-2 md:grid-cols-3 gap-1"
-          >
-            {activeCategory === "backend" &&
-              backendTechnologies.map(
-                ({ key, name, shortDesc, img: Image, link }) => (
+
+        {/* Backend Technologies */}
+        <AnimatePresence mode="wait">
+          {activeCategory === "backend" && (
+            <motion.div
+              initial="closed"
+              animate="open"
+              exit="closed"
+              variants={containerVariants}
+              className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-1"
+            >
+              {backendTechnologies.map(
+                ({ key, name, shortDesc, img: Image }) => (
                   <motion.div
+                    data-tooltip-anchor={`backend-${key}`}
+                    key={key}
                     initial="hidden"
                     animate="visible"
                     exit="hidden"
                     variants={contentVariants}
-                    onClick={() => setActiveFrontendIntex(key)}
-                    key={key}
-                    className=" border border-mainBlack dark:border-mainWhite p-1 md:p-3 text-mainBlack dark:text-mainWhite flex flex-col"
+                    onClick={() =>
+                      setActiveBackendIntex((prev) =>
+                        prev === key ? null : key
+                      )
+                    }
+                    className={`border border-mainBlack dark:border-mainWhite p-1 md:p-3 flex flex-col cursor-pointer ${
+                      activeBackendIndex === key
+                        ? "bg-mainBlack dark:bg-mainWhite text-mainWhite dark:text-mainBlack"
+                        : "text-mainBlack dark:text-mainWhite"
+                    }`}
                   >
-                    <Image className="w-5 h-6 " />
-                    <h3 className="font-panchang tracking-tight text-xs">
-                      {name}
-                    </h3>
+                    <div className="flex flex-col">
+                      <Image className="w-5 h-6" />
+                      <h3 className="font-panchang tracking-tight text-xs">
+                        {name}
+                      </h3>
+                    </div>
                   </motion.div>
                 )
               )}
-          </motion.div>
+            </motion.div>
+          )}
         </AnimatePresence>
       </div>
+
+      {/* Frontend Tooltip */}
+      {activeFrontendIndex !== null && (
+        <Tooltip
+          anchorSelect={`[data-tooltip-anchor='frontend-${activeFrontendIndex}']`}
+          content={
+            frontendTechnologies.find((t) => t.key === activeFrontendIndex)
+              ?.shortDesc || ""
+          }
+          place="top"
+          openOnClick={false}
+          isOpen={true}
+          style={{ width: "250px", fontSize: "0.8rem" }}
+        />
+      )}
+
+      {/* Backend Tooltip */}
+      {activeBackendIndex !== null && (
+        <Tooltip
+          anchorSelect={`[data-tooltip-anchor='backend-${activeBackendIndex}']`}
+          content={
+            backendTechnologies.find((t) => t.key === activeBackendIndex)
+              ?.shortDesc || ""
+          }
+          place="top"
+          openOnClick={false}
+          isOpen={true}
+          style={{ width: "250px", fontSize: "0.8rem" }}
+        />
+      )}
     </div>
   );
 };
