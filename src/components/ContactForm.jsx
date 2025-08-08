@@ -4,7 +4,7 @@ const ContactForm = () => {
   return (
     <div className="flex w-full">
       <div className="px-4 md:px-8 flex flex-col">
-        <form>
+        <formp className="flex flex-col text-mainBlack dark:text-mainWhite">
           <div className="mb-4 flex flex-col">
             <label htmlFor="name" className="font-panchang">
               Name{" "}
@@ -49,7 +49,7 @@ const ContactForm = () => {
               Submit
             </button>
           </div>
-        </form>
+        </formp>
       </div>
     </div>
   );

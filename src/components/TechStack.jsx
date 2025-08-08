@@ -46,7 +46,7 @@ const TechStack = () => {
           className={`font-semibold font-panchang  text-left p-1 mb-1 ${
             activeCategory === "frontend"
               ? "bg-mainBlack text-mainWhite dark:bg-mainWhite dark:text-mainBlack"
-              : ""
+              : "text-mainBlack dark:text-mainWhite"
           }`}
           onClick={() =>
             setActiveCategory(activeCategory === "frontend" ? "" : "frontend")
@@ -104,7 +104,7 @@ const TechStack = () => {
           className={`font-semibold font-panchang text-left p-1 mb-1 ${
             activeCategory === "backend"
               ? "bg-mainBlack text-mainWhite dark:bg-mainWhite dark:text-mainBlack"
-              : ""
+              : "text-mainBlack dark:text-mainWhite"
           }`}
           onClick={() =>
             setActiveCategory(activeCategory === "backend" ? "" : "backend")
