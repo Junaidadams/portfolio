@@ -4,7 +4,7 @@ const ContactForm = () => {
   return (
     <div className="flex w-full">
       <div className="px-4 md:px-8 flex flex-col">
-        <formp className="flex flex-col text-mainBlack dark:text-mainWhite">
+        <form className="flex flex-col text-mainBlack dark:text-mainWhite">
           <div className="mb-4 flex flex-col">
             <label htmlFor="name" className="font-panchang">
               Name{" "}
@@ -44,12 +44,12 @@ const ContactForm = () => {
           <div className="mb-4 flex flex-col">
             <button
               type="submit"
-              className="bg-mainBlack dark:bg-mainWhite text-mainWhite dark:text-mainBlack py-1 px-2 w-fit hover:bg-mainWhite dark:hover:bg-mainBlack transition duration-200 font-panchang"
+              className="bg-mainBlack dark:bg-mainWhite text-mainWhite dark:text-mainBlack py-1 px-2 w-fit hover:bg-mainWhite dark:hover:bg-mainBlack transition duration-200 font-panchang dark:hover:text-mainWhite hover:text-mainBlack border border-mainBlack dark:hover:border-mainWhite hover:cursor-pointer"
             >
               Submit
             </button>
           </div>
-        </formp>
+        </form>
       </div>
     </div>
   );

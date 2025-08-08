@@ -19,7 +19,7 @@ import { DiDjango, DiMongodb, DiMysql, DiNodejs } from "react-icons/di";
 
 export const websiteInformation = [
   {
-    name: "Roob",
+    name: "Junaid Adams",
     copywright: "Copywright.",
     year: 2024,
     developer: "Junaid Adams",
@@ -48,18 +48,14 @@ export const navigationLinks = [
     name: "home",
     link: "#home",
   },
+
   {
     key: 2,
-    name: "pricing",
-    link: "#pricing",
+    name: "projects",
+    link: "#projects",
   },
   {
     key: 3,
-    name: "portfolio",
-    link: "#portfolio",
-  },
-  {
-    key: 4,
     name: "contact",
     link: "#contact",
   },
