@@ -4,6 +4,7 @@ import "./index.css";
 import { ProjectTile } from "./components/ProjectTile";
 import TechStack from "./components/TechStack";
 import SectionWrapper from "./components/wrappers/SectionWrapper";
+import ContactForm from "./components/ContactForm";
 
 function App() {
   return (
@@ -50,6 +51,18 @@ function App() {
           </div>
 
           <TechStack />
+        </div>
+      </SectionWrapper>
+      <SectionWrapper id="contact">
+        {" "}
+        <div className="w-11/12 h-11/12 overflow-auto border-black border-[1px] flex flex-col dark:border-white rounded-4xl">
+          <div className=" font-panchang font-extralight text-mainBlack text-3xl md:text-4xl p-4 sm:p-6 md:px-8  dark:bg-mainBlack dark:text-mainWhite w-fit rounded-r-3xl">
+            <h1 className="font font-panchang text-left dark:text-mainWhite ">
+              Contact
+            </h1>
+            <p className="text-base font-semibold">Get in touch with me </p>
+          </div>
+          <ContactForm />
         </div>
       </SectionWrapper>
     </main>
