@@ -11,10 +11,8 @@ function App() {
   return (
     <main className="-mt-[33px]">
       <SectionWrapper id="home">
-        <div className="relative w-11/12 h-11/12 bg-cover bg-center bg-[url(/lines.jpg)] dark:bg-[url(/scales.jpg)] flex flex-col border dark:border-white border-black rounded-4xl overflow-hidden">
-          {/* Background texture in bottom right */}
-
-          <div className="font-panchang font-extralight tracking-wid  text-mainBlack my-auto text-3xl md:text-4xl p-4 sm:p-6 md:p-8 lg:p-10 bg-mainWhite dark:bg-mainBlack dark:text-mainWhite w-fit -translate-[1px] round border border-y-mainBlack border-r-mainBlack border-l-mainWhite dark:border-y-mainWhite dark:border-r-mainWhite dark:border-l-mainBlack ">
+        <div className="relative w-11/12 h-11/12 bg-cover bg-center bg-[url(/lines.jpg)] dark:bg-[url(/scales.jpg)] flex flex-col border dark:border-white border-black rounded-4xl">
+          <div className="font-panchang font-extralight text-mainBlack my-auto text-3xl md:text-4xl p-4 sm:p-6 md:p-8 lg:p-10 bg-mainWhite dark:bg-mainBlack dark:text-mainWhite w-fit -translate-[1px] round border border-y-mainBlack border-r-mainBlack border-l-mainWhite dark:border-y-mainWhite dark:border-r-mainWhite dark:border-l-mainBlack ">
             <h1 className="">Junaid Adams</h1>
             <h1 className="">Portfolio</h1>
             <p className="text-base font-semibold">(The third one)</p>

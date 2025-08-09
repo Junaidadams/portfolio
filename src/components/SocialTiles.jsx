@@ -13,9 +13,9 @@ const SocialTiles = () => {
         {socials.map(({ key, name, link, logo: Logo, accountName }) => (
           <div
             key={key}
-            className=" text-center border border-mainBlack p-1 hover:bg-mainBlack dark:hover:bg-mainWhite hover:text-mainWhite dark:hover:text-mainBlack transition duration-300 w-[90px] "
+            className=" text-center border border-mainBlack p-1 hover:bg-mainBlack dark:text-mainWhite dark:hover:bg-mainWhite hover:text-mainWhite dark:hover:text-mainBlack transition duration-300 w-[90px] "
           >
-            <motion.a href={link} className="flex flex-col">
+            <motion.a href={link} target="no_target" className="flex flex-col">
               <Logo size={60} color="" className="mb-1 mx-auto" />
               <div className="">
                 <p className="">{name}</p>
