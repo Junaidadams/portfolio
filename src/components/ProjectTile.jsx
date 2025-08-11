@@ -74,9 +74,9 @@ export const ProjectTile = () => {
                     variants={contentVariants}
                     className=" text-gray-700 dark:text-gray-300 flex space-y-1 flex-col lg:flex-row lg:space-x-9"
                   >
-                    <div className="sm:max-w-[420px] lg:my-auto lg:h-fit">
+                    <div className="sm:max-w-[420px] font-chillax lg:my-auto lg:h-fit">
                       <p className="lg:hidden mb-2">{project.shortDesc}</p>
-                      <p className="hidden lg:block">{project.longDesc}</p>
+                      <p className="hidden lg:block ">{project.longDesc}</p>
                       <div className="flex flex-row mb-2">
                         <div className="lg:hidden">
                           {project.tags.map(({ key, name, icon: Icon }) => (
