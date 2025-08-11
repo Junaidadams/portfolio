@@ -49,7 +49,10 @@ function App() {
           <p className="text-gray-700 dark:text-gray-300">
             Hi, I'm Junaid. A developer with over two years of experience
             developing web applications and a strong focus on providing great
-            value to clients.{" "}
+            value to clients. <br />
+            <br />I am currently completing a BSc in Modern Computer Science at
+            OPIT - Open Institute of Technology, where I am learning the latest
+            technologies and best practices in software development.
           </p>
         </div>
 
@@ -62,6 +65,15 @@ function App() {
             Contact
           </h1>
           <p className="text-base font-semibold">Get in touch with me </p>
+        </div>
+        <div className=" px-4 md:px-8 mb-5">
+          <h1 className="font font-panchang text-left dark:text-mainWhite ">
+            Interested in working together?
+          </h1>
+          <p className="text-gray-700 dark:text-gray-300">
+            I am currently looking for new opportunities. If you are interested
+            in working with me, please feel free to reach out.
+          </p>
         </div>
         <ContactForm />
         <SocialTiles />
