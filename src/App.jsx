@@ -42,7 +42,7 @@ function App() {
           </h1>
           <p className="text-base font-semibold">More information about me.</p>
         </div>
-        <div className=" px-4 md:px-8 mb-5">
+        <div className=" px-4 md:px-8 mb-5 xl:max-w-2/3">
           <h1 className="font font-panchang text-left dark:text-mainWhite ">
             Summary
           </h1>
@@ -65,7 +65,7 @@ function App() {
           </h1>
           <p className="text-base font-semibold">Get in touch with me </p>
         </div>
-        <div className=" px-4 md:px-8 mb-5">
+        <div className=" px-4 md:px-8 mb-5 xl:max-w-2/3">
           <h1 className="font font-panchang text-left dark:text-mainWhite ">
             Interested in working together?
           </h1>
