@@ -43,7 +43,7 @@ const TechStack = () => {
 
         {/* Frontend Button */}
         <button
-          className={`font-semibold font-panchang hover:cursor-pointer text-left p-1 mb-1 ${
+          className={`font-semibold font-panchang hover:cursor-pointer text-left py-1 px-2 mb-1 ${
             activeCategory === "frontend"
               ? "bg-mainBlack text-mainWhite dark:bg-mainWhite dark:text-mainBlack"
               : "text-mainBlack dark:text-mainWhite"
@@ -101,7 +101,7 @@ const TechStack = () => {
 
         {/* Backend Button */}
         <button
-          className={`font-semibold font-panchang hover:cursor-pointer text-left p-1 mb-1 ${
+          className={`font-semibold font-panchang hover:cursor-pointer text-left py-1 px-2 mb-1 ${
             activeCategory === "backend"
               ? "bg-mainBlack text-mainWhite dark:bg-mainWhite dark:text-mainBlack"
               : "text-mainBlack dark:text-mainWhite"

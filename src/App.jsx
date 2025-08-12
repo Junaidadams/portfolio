@@ -23,10 +23,10 @@ function App() {
         </div>
       </section>
       <SectionWrapper id="projects">
-        <div
+        {/* <div
           className="pointer-events-none absolute bottom-0 right-0 w-40 h-40 bg-no-repeat bg-contain rounded-tl-full opacity-40"
           style={{ backgroundImage: "url('/crosstexture.png')" }}
-        />
+        /> */}
         <div className=" font-panchang font-extralight text-mainBlack text-3xl md:text-4xl p-4 sm:p-6 md:px-8  dark:bg-mainBlack dark:text-mainWhite w-fit rounded-r-3xl">
           <h1>Projects</h1>
           <p className="text-base font-semibold">
@@ -49,10 +49,9 @@ function App() {
           <p className="text-gray-700 dark:text-gray-300">
             Hi, I'm Junaid. A developer with over two years of experience
             developing web applications and a strong focus on providing great
-            value to clients. <br />
-            <br />I am currently completing a BSc in Modern Computer Science at
-            OPIT - Open Institute of Technology, where I am learning the latest
-            technologies and best practices in software development.
+            value to clients. I am currently completing a BSc in Modern Computer
+            Science at OPIT - Open Institute of Technology, looking forward to
+            having a degree under my belt.
           </p>
         </div>
 
