@@ -6,6 +6,7 @@ import TechStack from "./components/TechStack";
 import SectionWrapper from "./components/wrappers/SectionWrapper";
 import ContactForm from "./components/ContactForm";
 import SocialTiles from "./components/SocialTiles";
+import GlassesIcon from "./components/Glasses";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         </div>
       </section>
       <SectionWrapper id="projects">
+        <GlassesIcon />
         {/* <div
           className="pointer-events-none absolute bottom-0 right-0 w-40 h-40 bg-no-repeat bg-contain rounded-tl-full opacity-40"
           style={{ backgroundImage: "url('/crosstexture.png')" }}
@@ -36,6 +38,8 @@ function App() {
         <ProjectTile />
       </SectionWrapper>
       <SectionWrapper id="about">
+        <GlassesIcon />
+
         <div className=" font-panchang font-extralight text-mainBlack text-3xl md:text-4xl p-4 sm:p-6 md:px-8  dark:bg-mainBlack dark:text-mainWhite w-fit rounded-r-3xl">
           <h1 className="font font-panchang text-left dark:text-mainWhite ">
             About
