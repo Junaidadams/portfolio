@@ -5,29 +5,31 @@ const ContactForm = () => {
     <div className="flex w-full">
       <div className="px-4 md:px-8 flex flex-col">
         <form className="flex flex-col text-mainBlack dark:text-mainWhite">
-          <div className="mb-4 flex flex-col">
-            <label htmlFor="name" className="font-panchang">
-              Name{" "}
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              required
-              className="border-b border-r focus:outline-none p-1 focus:bg-mainBlack dark:focus:bg-mainWhite focus:text-mainWhite dark:focus:text-mainBlack transition duration-200"
-            />
-          </div>
-          <div className="mb-4 flex flex-col">
-            <label htmlFor="email" className="font-panchang">
-              Email{" "}
-            </label>
-            <input
-              type="text"
-              id="email"
-              name="email"
-              required
-              className="border-b border-r focus:outline-none p-1 focus:bg-mainBlack dark:focus:bg-mainWhite focus:text-mainWhite dark:focus:text-mainBlack transition duration-200"
-            />
+          <div className="flex flex-col md:flex-row md:space-x-3">
+            <div className="mb-4 flex flex-col">
+              <label htmlFor="name" className="font-panchang">
+                Name{" "}
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                className="border-b border-r focus:outline-none p-1 focus:bg-mainBlack dark:focus:bg-mainWhite focus:text-mainWhite dark:focus:text-mainBlack transition duration-200 font-chillax selection:bg-mainBlack selection:text-mainWhite dark:selection:bg-mainWhite dark:selection:text-mainBlack"
+              />
+            </div>
+            <div className="mb-4 flex flex-col">
+              <label htmlFor="email" className="font-panchang">
+                Email{" "}
+              </label>
+              <input
+                type="text"
+                id="email"
+                name="email"
+                required
+                className="border-b border-r focus:outline-none p-1 focus:bg-mainBlack dark:focus:bg-mainWhite focus:text-mainWhite dark:focus:text-mainBlack transition duration-200 font-chillax dark:selection:bg-mainBlack dark:selection:text-mainWhite selection:bg-mainWhite selection:text-mainBlack"
+              />
+            </div>
           </div>
           <div className="mb-4 flex flex-col">
             <label htmlFor="message" className="font-panchang">
@@ -38,7 +40,7 @@ const ContactForm = () => {
               id="message"
               name="message"
               required
-              className="border-b border-r focus:outline-none p-1 focus:bg-mainBlack dark:focus:bg-mainWhite focus:text-mainWhite dark:focus:text-mainBlack transition duration-200"
+              className="border-b border-r focus:outline-none p-1 focus:bg-mainBlack dark:focus:bg-mainWhite focus:text-mainWhite dark:focus:text-mainBlack transition duration-200 font-chillax selection:bg-mainBlack selection:text-mainWhite dark:selection:bg-mainWhite dark:selection:text-mainBlack"
             />
           </div>
           <div className="mb-4 flex flex-col">

@@ -30,7 +30,7 @@ export default function GlassesIcon({
       fill="none"
       role="img"
       aria-label="Animated glasses"
-      className="absolute bottom-0 right-3 w-10 h-10 text-mainBlack dark:text-mainWhite animate-pulse"
+      className="absolute bottom-0 right-3 lg:right-5 lg:bottom-2 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-20 xl:ww-20 text-mainBlack dark:text-mainWhite animate-pulse"
     >
       {/* left temple */}
       <motion.line

@@ -5,7 +5,7 @@ const { socials } = websiteInformation[0];
 
 const Footer = () => {
   return (
-    <div className="flex py-20 bg-mainWhite dark:bg-mainBlack ">
+    <div className="flex py-20 bg-mainWhite dark:bg-mainBlack font-chillax">
       <ul className="my-auto ml-auto mr-6 p-4 capitalize text-periwinkle">
         {navigationLinks.map((link) => (
           <motion.li
