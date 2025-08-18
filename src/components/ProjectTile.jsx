@@ -52,7 +52,7 @@ export const ProjectTile = () => {
     <div className="flex w-full">
       <div className=" px-4 md:px-8">
         {projects.map((project, index) => (
-          <div key={project.key} className="mb-5 mx">
+          <div key={project.key} className="mb-3 md:mb-4 2xl:mb-5 mx">
             <button
               onClick={() => toggleAccordion(index)}
               className="font font-panchang text-left dark:text-mainWhite hover:cursor-pointer"
