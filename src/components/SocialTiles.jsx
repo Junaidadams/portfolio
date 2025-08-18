@@ -5,7 +5,7 @@ const { socials } = websiteInformation[0];
 
 const SocialTiles = () => {
   return (
-    <div className="flex flex-col sm:w-fit font-panchang space-x-2 mt-2 mx-4 md:mx-8 pt-4 border-t border-mainBlack">
+    <div className="flex flex-col sm:w-fit font-panchang space-x-2 mt-2 mx-4 md:mx-8 pt-4 border-t border-mainBlack dark:border-mainWhite">
       <h1 className="font font-panchang text-left mb-4 dark:text-mainWhite ">
         Find me here:
       </h1>{" "}
