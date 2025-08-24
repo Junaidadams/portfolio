@@ -27,7 +27,7 @@ const variants = {
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="z-20 flex justify-between bg-white dark:bg-mainBlack max-w-screen sticky top-0 max-h-10">
+    <nav className="z-20 flex justify-between bg-white dark:bg-mainBlack max-w-screen sticky top-0 max-h-10">
       {/* Navigation Links */}
 
       <ul className="space-x-8 capitalize hidden md:flex flex-row p-2 mx-auto  rounded-full">
@@ -77,7 +77,7 @@ const Navbar = () => {
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </nav>
   );
 };
 

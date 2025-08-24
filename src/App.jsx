@@ -15,7 +15,7 @@ function App() {
     <main className="-mt-[33px]">
       <section
         id="home"
-        className=" bg-mainWhite dark:bg-[#0e0f0b] h-screen flex items-center justify-center"
+        className=" bg-mainWhite dark:bg-[#0e0f0b] p-2 md:p-10 lg:p-12 h-screen flex items-center justify-center"
       >
         <motion.div
           initial={{ opacity: 0 }}
@@ -25,7 +25,8 @@ function App() {
             duration: 1,
             x: { duration: 1 },
           }}
-          className="relative w-11/12 h-11/12 bg-cover bg-center bg-[url(/lines.jpg)] dark:bg-[url(/scales.jpg)] flex flex-col border dark:border-white border-black rounded-4xl"
+          alt="Background with lines and scales"
+          className="relative w-full h-full bg-cover bg-center bg-[url(/lines.jpg)] dark:bg-[url(/scales.jpg)] flex flex-col border dark:border-white border-black rounded-4xl"
         >
           <div className="font-panchang font-extralight text-mainBlack my-auto text-3xl md:text-4xl p-4 sm:p-6 md:p-8 lg:p-10  bg-mainWhite dark:bg-mainBlack dark:text-mainWhite w-fit -translate-[1px] round border border-y-mainBlack border-r-mainBlack border-l-mainWhite dark:border-y-mainWhite dark:border-r-mainWhite dark:border-l-mainBlack ">
             <h1 className="">Junaid Adams</h1>

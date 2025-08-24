@@ -152,6 +152,7 @@ export const ProjectTile = () => {
                       )}
                     </div>
                     <img
+                      alt={"" + project.name + " screenshot"}
                       className="my-auto max-w-[375 sm:max-w-[420px] border border-black dark:border-mainWhite"
                       src={project.img}
                     />

@@ -4,7 +4,7 @@ const SectionWrapper = ({ id, extraStyling, children }) => {
   return (
     <section
       id={id}
-      className={`${extraStyling} bg-mainWhite dark:bg-[#0e0f0b] h-screen flex items-center justify-center`}
+      className={`${extraStyling} bg-mainWhite dark:bg-[#0e0f0b] h-screen flex items-center justify-center p-2 md:p-10 lg:p-12`}
     >
       <motion.div
         initial={{ opacity: 0 }}
@@ -14,7 +14,7 @@ const SectionWrapper = ({ id, extraStyling, children }) => {
           duration: 1,
           x: { duration: 1 },
         }}
-        className="w-11/12 h-11/12 overflow-auto border-black border-[1px] flex flex-col dark:border-mainWhite rounded-4xl relative xl:p-6 2xl:p-7"
+        className="w-full h-full overflow-auto border-black border-[1px] flex flex-col dark:border-mainWhite rounded-4xl relative xl:p-6 2xl:p-7"
       >
         {children}
       </motion.div>
