@@ -27,15 +27,15 @@ const variants = {
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="z-20 flex justify-between bg-white dark:bg-mainBlack max-w-screen sticky top-0 max-h-10">
+    <nav className="dark:bg-mainBlack sticky top-0 z-20 flex max-h-[30px] max-w-screen justify-between bg-white md:max-h-10">
       {/* Navigation Links */}
 
-      <ul className="space-x-8 capitalize hidden md:flex flex-row p-2 mx-auto  rounded-full">
+      <ul className="mx-auto hidden flex-row space-x-8 rounded-full p-2 capitalize md:flex">
         {navigationLinks.map((link) => (
           <li key={link.key} className="">
             <a
               href={link.link}
-              className=" py-2 px-3 rounded-full dark:text-white mb-2 dark:hover:text-gray-300 font-panchang font-light"
+              className="font-panchang mb-2 rounded-full px-3 py-2 font-light dark:text-white dark:hover:text-gray-300"
             >
               {link.name}
             </a>
@@ -45,7 +45,7 @@ const Navbar = () => {
 
       {/* Toggle Button */}
 
-      <div className="md:hidden ">
+      <div className="md:hidden">
         <Toggle isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
       </div>
 
@@ -59,16 +59,16 @@ const Navbar = () => {
             exit="closed"
             variants={variants}
             transition={{ duration: 0.5 }}
-            className="absolute top-0 left-0 w-full shadow-lg flex flex-col space-y-6 pb-10 capitalize md:hidden z-30 bg-mainWhite dark:bg-mainBlack bg-opacity-95 border-b-mainWhite border"
+            className="bg-mainWhite dark:bg-mainBlack bg-opacity-95 border-b-mainWhite absolute top-0 left-0 z-30 flex w-full flex-col space-y-6 border pb-10 capitalize shadow-lg md:hidden"
           >
-            <div className="md:hidden ">
+            <div className="md:hidden">
               <Toggle isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
             </div>
             {navigationLinks.map((link) => (
               <a
                 key={link.key}
                 href={link.link}
-                className="text-mainBlack dark:text-mainWhite font-panchang tracking-tighter m-auto font-light "
+                className="text-mainBlack dark:text-mainWhite font-panchang m-auto font-light tracking-tighter"
                 onClick={() => setIsOpen(false)} // Close menu on link click
               >
                 {link.name}

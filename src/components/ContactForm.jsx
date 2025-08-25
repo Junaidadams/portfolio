@@ -33,7 +33,7 @@ const ContactForm = () => {
     try {
       await axios.post(
         "https://mail-server-6sjb.onrender.com/api/mail/portfolio-contact",
-        formData
+        formData,
       );
       setSubmissionState({
         loading: false,
@@ -53,10 +53,10 @@ const ContactForm = () => {
 
   return (
     <div className="flex w-full">
-      <div className="px-4 md:px-8 flex flex-col">
+      <div className="flex flex-col px-4 md:px-8">
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col text-mainBlack dark:text-mainWhite"
+          className="text-mainBlack dark:text-mainWhite flex flex-col"
         >
           <div className="flex flex-col md:flex-row md:space-x-3">
             <div className="mb-4 flex flex-col">
@@ -70,7 +70,7 @@ const ContactForm = () => {
                 id="name"
                 name="name"
                 required
-                className="border-b border-r focus:outline-none p-1 focus:bg-mainBlack dark:focus:bg-mainWhite focus:text-mainWhite dark:focus:text-mainBlack transition duration-200 font-chillax selection:bg-mainBlack selection:text-mainWhite dark:selection:bg-mainWhite dark:selection:text-mainBlack"
+                className="focus:bg-mainBlack dark:focus:bg-mainWhite focus:text-mainWhite dark:focus:text-mainBlack font-chillax selection:bg-mainBlack selection:text-mainWhite dark:selection:bg-mainWhite dark:selection:text-mainBlack border-r border-b p-1 transition duration-200 focus:outline-none"
               />
             </div>
             <div className="mb-4 flex flex-col">
@@ -84,7 +84,7 @@ const ContactForm = () => {
                 id="email"
                 name="email"
                 required
-                className="border-b border-r focus:outline-none p-1 focus:bg-mainBlack dark:focus:bg-mainWhite focus:text-mainWhite dark:focus:text-mainBlack transition duration-200 font-chillax dark:selection:bg-mainBlack dark:selection:text-mainWhite selection:bg-mainWhite selection:text-mainBlack"
+                className="focus:bg-mainBlack dark:focus:bg-mainWhite focus:text-mainWhite dark:focus:text-mainBlack font-chillax dark:selection:bg-mainBlack dark:selection:text-mainWhite selection:bg-mainWhite selection:text-mainBlack border-r border-b p-1 transition duration-200 focus:outline-none"
               />
             </div>
           </div>
@@ -98,19 +98,19 @@ const ContactForm = () => {
               id="message"
               name="message"
               required
-              className="border-b border-r focus:outline-none p-1 focus:bg-mainBlack dark:focus:bg-mainWhite focus:text-mainWhite dark:focus:text-mainBlack transition duration-200 font-chillax selection:bg-mainBlack selection:text-mainWhite dark:selection:bg-mainWhite dark:selection:text-mainBlack"
+              className="focus:bg-mainBlack dark:focus:bg-mainWhite focus:text-mainWhite dark:focus:text-mainBlack font-chillax selection:bg-mainBlack selection:text-mainWhite dark:selection:bg-mainWhite dark:selection:text-mainBlack border-r border-b p-1 transition duration-200 focus:outline-none"
             />
           </div>
           <div className="mb-4 flex flex-col">
             <button
               disabled={submissionState.loading}
               type="submit"
-              className="bg-mainBlack dark:bg-mainWhite text-mainWhite dark:text-mainBlack py-1 px-2 w-fit hover:bg-mainWhite dark:hover:bg-mainBlack transition duration-200 font-panchang dark:hover:text-mainWhite hover:text-mainBlack border border-mainBlack dark:hover:border-mainWhite hover:cursor-pointer font-semibold tracking-tight"
+              className="bg-mainBlack dark:bg-mainWhite text-mainWhite dark:text-mainBlack hover:bg-mainWhite dark:hover:bg-mainBlack font-panchang dark:hover:text-mainWhite hover:text-mainBlack border-mainBlack dark:hover:border-mainWhite w-fit border px-2 py-1 font-semibold tracking-tight transition duration-200 hover:cursor-pointer"
             >
               {submissionState.loading ? (
                 <div className="flex flex-row space-x-1">
                   <span>Sending...</span>
-                  <CgSpinnerAlt className="animate-spin my-auto" />
+                  <CgSpinnerAlt className="my-auto animate-spin" />
                 </div>
               ) : (
                 "Send Message"

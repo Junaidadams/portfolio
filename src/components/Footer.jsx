@@ -5,26 +5,26 @@ const { socials } = websiteInformation[0];
 
 const Footer = () => {
   return (
-    <footer className="flex py-20 bg-mainWhite dark:bg-mainBlack font-chillax">
-      <ul className="my-auto ml-auto mr-6 p-4 capitalize text-periwinkle">
+    <footer className="bg-mainWhite dark:bg-mainBlack font-chillax flex py-20">
+      <ul className="text-periwinkle my-auto mr-6 ml-auto p-4 capitalize">
         {navigationLinks.map((link) => (
           <motion.li
             whileHover={{ y: -1 }}
             key={link.key}
-            className="text-mainBlack hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-100 my-2"
+            className="text-mainBlack my-2 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-100"
           >
             <a href={link.link}>{link.name}</a>
           </motion.li>
         ))}
       </ul>
-      <ul className="my-auto mr-auto pl-6 text-periwinkle border-l border-mainBlack dark:border-mainWhite">
+      <ul className="text-periwinkle border-mainBlack dark:border-mainWhite my-auto mr-auto border-l pl-6">
         {socials.map(({ key, name, link, logo: Logo }) => (
           <motion.li
             whileHover={{ y: -1 }}
             key={key}
-            className="text-mainBlack dark:text-slate-300 dark:hover:text-slate-100 my-2"
+            className="text-mainBlack my-2 dark:text-slate-300 dark:hover:text-slate-100"
           >
-            <a href={link} className="flex space-x-2 ">
+            <a href={link} className="flex space-x-2">
               <Logo className="my-auto" />
               <p className="mr-auto text-left">{name}</p>
             </a>

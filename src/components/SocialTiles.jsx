@@ -5,20 +5,17 @@ const { socials } = websiteInformation[0];
 
 const SocialTiles = () => {
   return (
-    <div className="flex flex-col sm:w-fit font-panchang space-x-2 mt-2 mx-4 md:mx-8 pt-4 border-t border-mainBlack dark:border-mainWhite">
-      <h1 className="font font-panchang text-left mb-4 dark:text-mainWhite ">
-        Find me here:
-      </h1>{" "}
+    <div className="font-panchang border-mainBlack dark:border-mainWhite mx-4 mt-2 flex flex-col space-x-2 border-t pt-4 sm:w-fit md:mx-8">
       <div className="flex space-x-3 text-sm tracking-tighter">
         {socials.map(({ key, name, link, logo: Logo }) => (
           <div
             key={key}
-            className=" text-center border border-mainBlack p-1 hover:bg-mainBlack dark:text-mainWhite dark:hover:bg-mainWhite hover:text-mainWhite dark:hover:text-mainBlack transition duration-300 w-[90px] "
+            className="border-mainBlack hover:bg-mainBlack dark:text-mainWhite dark:hover:bg-mainWhite hover:text-mainWhite dark:hover:text-mainBlack w-[90px] border p-1 text-center transition duration-300"
           >
             <motion.a href={link} target="no_target" className="flex flex-col">
-              <Logo size={60} color="" className="mb-1 mx-auto" />
+              <Logo color="" className="mx-auto mb-1 text-3xl" />
               <div className="">
-                <p className="">{name}</p>
+                <p className="text-xs">{name}</p>
               </div>
             </motion.a>
           </div>

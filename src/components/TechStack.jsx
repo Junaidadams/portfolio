@@ -38,12 +38,12 @@ const TechStack = () => {
 
   return (
     <div className="flex w-full">
-      <div className="px-4 md:px-8 flex flex-col">
-        <h1 className="font font-panchang text-left dark:text-mainWhite"></h1>
+      <div className="flex flex-col px-4 md:px-8">
+        <h1 className="font font-panchang dark:text-mainWhite text-left"></h1>
 
         {/* Frontend Button */}
         <button
-          className={`font-semibold font-panchang hover:cursor-pointer text-left py-1 px-2 mb-1 ${
+          className={`font-panchang mb-1 px-2 py-1 text-left font-semibold hover:cursor-pointer ${
             activeCategory === "frontend"
               ? "bg-mainBlack text-mainWhite dark:bg-mainWhite dark:text-mainBlack"
               : "text-mainBlack dark:text-mainWhite"
@@ -64,7 +64,7 @@ const TechStack = () => {
               animate="open"
               exit="closed"
               variants={containerVariants}
-              className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-1"
+              className="grid grid-cols-2 gap-1 sm:grid-cols-2 md:grid-cols-3"
             >
               {frontendTechnologies.map(
                 ({ key, name, shortDesc, img: Image }) => (
@@ -77,23 +77,23 @@ const TechStack = () => {
                     variants={contentVariants}
                     onClick={() =>
                       setActiveFrontendIntex((prev) =>
-                        prev === key ? null : key
+                        prev === key ? null : key,
                       )
                     }
-                    className={`border border-mainBlack dark:border-mainWhite p-1 md:p-3 flex flex-col cursor-pointer transition duration-500 ${
+                    className={`border-mainBlack dark:border-mainWhite flex cursor-pointer flex-col border p-1 transition duration-500 md:p-3 ${
                       activeFrontendIndex === key
                         ? "bg-mainBlack dark:bg-mainWhite text-mainWhite dark:text-mainBlack"
                         : "text-mainBlack dark:text-mainWhite"
                     }`}
                   >
                     <div className="flex flex-col">
-                      <Image className="w-5 h-6" />
-                      <h3 className="font-panchang tracking-tight text-xs">
+                      <Image className="h-6 w-5" />
+                      <h3 className="font-panchang text-xs tracking-tight">
                         {name}
                       </h3>
                     </div>
                   </motion.div>
-                )
+                ),
               )}
             </motion.div>
           )}
@@ -101,7 +101,7 @@ const TechStack = () => {
 
         {/* Backend Button */}
         <button
-          className={`font-semibold font-panchang hover:cursor-pointer text-left py-1 px-2 mb-1 ${
+          className={`font-panchang mb-1 px-2 py-1 text-left font-semibold hover:cursor-pointer ${
             activeCategory === "backend"
               ? "bg-mainBlack text-mainWhite dark:bg-mainWhite dark:text-mainBlack"
               : "text-mainBlack dark:text-mainWhite"
@@ -121,7 +121,7 @@ const TechStack = () => {
               animate="open"
               exit="closed"
               variants={containerVariants}
-              className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-1"
+              className="grid grid-cols-2 gap-1 sm:grid-cols-2 md:grid-cols-3"
             >
               {backendTechnologies.map(
                 ({ key, name, shortDesc, img: Image }) => (
@@ -134,23 +134,23 @@ const TechStack = () => {
                     variants={contentVariants}
                     onClick={() =>
                       setActiveBackendIntex((prev) =>
-                        prev === key ? null : key
+                        prev === key ? null : key,
                       )
                     }
-                    className={`border border-mainBlack dark:border-mainWhite p-1 md:p-3 flex flex-col cursor-pointer ${
+                    className={`border-mainBlack dark:border-mainWhite flex cursor-pointer flex-col border p-1 md:p-3 ${
                       activeBackendIndex === key
                         ? "bg-mainBlack dark:bg-mainWhite text-mainWhite dark:text-mainBlack"
                         : "text-mainBlack dark:text-mainWhite"
                     }`}
                   >
                     <div className="flex flex-col">
-                      <Image className="w-5 h-6" />
-                      <h3 className="font-panchang tracking-tight text-xs">
+                      <Image className="h-6 w-5" />
+                      <h3 className="font-panchang text-xs tracking-tight">
                         {name}
                       </h3>
                     </div>
                   </motion.div>
-                )
+                ),
               )}
             </motion.div>
           )}

@@ -8,8 +8,7 @@ const Toggle = ({ isOpen, onClick }) => {
   return (
     <button
       onClick={onClick}
-      className={`p-[1px] rounded-full text-black dark:text-mainWhite  
-      `}
+      className={`dark:text-mainWhite rounded-full p-[1px] text-black`}
       aria-label="Toggle menu"
     >
       {isOpen ? (
