@@ -60,20 +60,31 @@ function App() {
           </h2>
           <p className="text-base font-semibold">Who I am and what I do.</p>
         </div>
-        <div className="mb-5 px-4 md:px-8 xl:max-w-2/3">
+        <div className="mb-3 px-4 md:px-8 xl:max-w-2/3">
           <h1 className="font font-panchang dark:text-mainWhite text-left">
             Summary
           </h1>
-          <p className="font-chillax text-gray-700 dark:text-gray-300">
+          <p className="font-chillax mb-2 text-gray-700 dark:text-gray-300">
             Hi, I'm Junaid — a freelance web developer based in Cape Town, South
             Africa. With over two years of experience building modern web
             applications, I specialize in React, Django, and full-stack
             development. I focus on delivering high-quality, scalable, and
-            user-friendly solutions for clients. <br />
-            <br />I am currently completing a BSc in Modern Computer Science at
-            OPIT (Open Institute of Technology) to further strengthen my
-            technical foundation.
+            user-friendly solutions for clients.
           </p>
+          <p className="font-chillax text-gray-700 dark:text-gray-300">
+            I am currently completing a BSc in Modern Computer Science at OPIT
+            (Open Institute of Technology) to further strengthen my technical
+            foundation.
+          </p>
+        </div>
+      </SectionWrapper>
+      <SectionWrapper id="techstack">
+        <GlassesIcon />
+        <div className="font-panchang text-mainBlack dark:bg-mainBlack dark:text-mainWhite w-fit rounded-r-3xl p-4 text-3xl font-extralight sm:p-6 md:px-8 md:text-4xl">
+          <h2 className="font font-panchang dark:text-mainWhite text-left">
+            Tech Stack
+          </h2>
+          <p className="text-base font-semibold"> Technologies I work with.</p>
         </div>
         <TechStack />
       </SectionWrapper>

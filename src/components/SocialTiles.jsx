@@ -10,7 +10,7 @@ const SocialTiles = () => {
         {socials.map(({ key, name, link, logo: Logo }) => (
           <div
             key={key}
-            className="border-mainBlack hover:bg-mainBlack dark:text-mainWhite dark:hover:bg-mainWhite hover:text-mainWhite dark:hover:text-mainBlack w-[90px] border p-1 text-center transition duration-300"
+            className="border-mainBlack hover:bg-mainBlack dark:border-mainWhite dark:text-mainWhite dark:hover:bg-mainWhite hover:text-mainWhite dark:hover:text-mainBlack w-[90px] border p-1 text-center transition duration-300"
           >
             <motion.a href={link} target="no_target" className="flex flex-col">
               <Logo color="" className="mx-auto mb-1 text-3xl" />

@@ -56,6 +56,11 @@ export const navigationLinks = [
   },
   {
     key: 3,
+    name: "tech stack",
+    link: "#techstack",
+  },
+  {
+    key: 4,
     name: "contact",
     link: "#contact",
   },
