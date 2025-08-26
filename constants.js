@@ -7,6 +7,8 @@ import weatherImage from "/projects/weather.png";
 import nikeImage from "/projects/nike.png";
 import newsletterclubImage from "/projects/newsletterclub.png";
 import roob from "/projects/roob.png";
+import { FaCode, FaCheckCircle, FaTools, FaSmile } from "react-icons/fa";
+import { MdWork } from "react-icons/md";
 
 import { SiPassport, SiVite } from "react-icons/si";
 import { SiNextdotjs, SiSanity } from "react-icons/si";
@@ -16,6 +18,7 @@ import { SiExpress } from "react-icons/si";
 import { FaLinkedin, FaGithub, FaHtml5 } from "react-icons/fa";
 import { FaReact } from "react-icons/fa";
 import { DiDjango, DiMongodb, DiMysql, DiNodejs } from "react-icons/di";
+import { FaC } from "react-icons/fa6";
 
 export const websiteInformation = [
   {
@@ -56,7 +59,7 @@ export const navigationLinks = [
   },
   {
     key: 3,
-    name: "tech stack",
+    name: "tech",
     link: "#techstack",
   },
   {
@@ -65,6 +68,42 @@ export const navigationLinks = [
     link: "#contact",
   },
 ];
+
+
+
+export const quickFacts = [
+  {
+    key: 1,
+    name: "Years Experience",
+    value: "2+",
+    icon: MdWork,
+  },
+  {
+    key: 2,
+    name: "Projects Completed",
+    value: "10+",
+    icon: FaCheckCircle,
+  },
+  {
+    key: 3,
+    name: "Technologies Mastered",
+    value: "15+",
+    icon: FaCode,
+  },
+  {
+    key: 4,
+    name: "Happy Clients",
+    value: "5+",
+    icon: FaSmile,
+  },
+  {
+    key: 5,
+    name: "Tools & Frameworks",
+    value: "Next.js, React, Prisma",
+    icon: FaTools,
+  },
+];
+
 
 export const projects = [
   {
