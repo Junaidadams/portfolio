@@ -18,8 +18,8 @@ import { SiExpress } from "react-icons/si";
 import { FaLinkedin, FaGithub, FaHtml5 } from "react-icons/fa";
 import { FaReact } from "react-icons/fa";
 import { DiDjango, DiMongodb, DiMysql, DiNodejs } from "react-icons/di";
-import { FaC } from "react-icons/fa6";
-
+import { CiCoffeeBean } from "react-icons/ci";
+import { CgMusicSpeaker } from "react-icons/cg";
 export const websiteInformation = [
   {
     name: "Junaid Adams",
@@ -72,21 +72,15 @@ export const navigationLinks = [
 export const quickFacts = [
   {
     key: 1,
-    name: "Years Experience",
-    value: "2+",
-    icon: MdWork,
+    name: "Coffee",
+    value: "Iced Americano",
+    icon: CiCoffeeBean,
   },
   {
     key: 2,
-    name: "Projects Completed",
-    value: "10+",
-    icon: FaCheckCircle,
-  },
-  {
-    key: 3,
-    name: "Technologies Mastered",
-    value: "15+",
-    icon: FaCode,
+    name: "Music",
+    value: "Lots of genres",
+    icon: CgMusicSpeaker,
   },
 ];
 

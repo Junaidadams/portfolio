@@ -10,7 +10,7 @@ const QuickFacts = () => {
     const fetchRepos = async () => {
       try {
         const response = await axios.get(
-          "https://api.github.com/users/Junaidadams",
+          "https://api.github.com/users/Junaidadams"
         );
         setRepositories(response.data.public_repos);
       } catch (error) {
@@ -26,17 +26,21 @@ const QuickFacts = () => {
   return (
     <div className="flex w-full">
       <div className="text-mainBlack dark:text-mainWhite flex flex-col px-4 md:px-8">
-        <div>
-          {quickFacts.map(({ key, value, name }) => (
-            <div key={key} className="mb-2 flex flex-row">
-              <div className="flex w-40 text-center">
-                <h3 className="font-chillax font-semibold">{value}</h3>
-                <p className="font-chillax my-auto text-sm">{name}</p>
+        <h3 className="font font-panchang dark:text-mainWhite text-left">
+          Things that I like
+        </h3>
+        <div className="flex flex-row flex-wrap gap-6 mt-4">
+          {quickFacts.map(({ key, value, name, icon: Icon }) => (
+            <div key={key} className="mb-2 flex ">
+              <div className="flex text-center flex-col">
+                <Icon className="text-2xl mb-1 mx-auto" />
+                <h3 className="font-chillax font-semibold">{name}</h3>
+                {/* <p className="font-chillax my-auto text-sm">{value}</p> */}
               </div>
             </div>
           ))}
 
-          <div className="mb-2 flex flex-row">
+          {/* <div className="mb-2 flex flex-row">
             <div className="flex w-40 text-center">
               <h3 className="font-chillax font-semibold">
                 {loading ? "Loading..." : repositories + "+"}
@@ -45,7 +49,7 @@ const QuickFacts = () => {
                 GitHub Repositories
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

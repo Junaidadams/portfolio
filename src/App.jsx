@@ -62,13 +62,13 @@ function App() {
           <p className="text-base font-semibold">Who I am and what I do.</p>
         </div>
         <div className="mb-3 px-4 md:px-8 xl:max-w-2/3">
-          <h1 className="font font-panchang dark:text-mainWhite text-left">
+          <h3 className="font font-panchang dark:text-mainWhite text-left">
             Summary
-          </h1>
+          </h3>
           <p className="font-chillax mb-2 text-gray-700 dark:text-gray-300">
             Hi, I'm Junaid — a freelance web developer based in Cape Town, South
             Africa. With over two years of experience building modern web
-            applications, I specialize in React, Django, and full-stack
+            applications, I specialize in full-stack
             development. I focus on delivering high-quality, scalable, and
             user-friendly solutions for clients.
           </p>
