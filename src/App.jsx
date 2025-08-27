@@ -3,7 +3,8 @@ import "./index.css";
 
 import { motion } from "framer-motion";
 
-import { ProjectTile } from "./components/ProjectTile";
+import QuickFacts from "./components/QuickFacts";
+import ProjectTile from "./components/ProjectTile";
 import TechStack from "./components/TechStack";
 import SectionWrapper from "./components/wrappers/SectionWrapper";
 import ContactForm from "./components/ContactForm";
@@ -77,6 +78,7 @@ function App() {
             foundation.
           </p>
         </div>
+        <QuickFacts />
       </SectionWrapper>
       <SectionWrapper id="techstack">
         <GlassesIcon />

@@ -69,8 +69,6 @@ export const navigationLinks = [
   },
 ];
 
-
-
 export const quickFacts = [
   {
     key: 1,
@@ -90,20 +88,7 @@ export const quickFacts = [
     value: "15+",
     icon: FaCode,
   },
-  {
-    key: 4,
-    name: "Happy Clients",
-    value: "5+",
-    icon: FaSmile,
-  },
-  {
-    key: 5,
-    name: "Tools & Frameworks",
-    value: "Next.js, React, Prisma",
-    icon: FaTools,
-  },
 ];
-
 
 export const projects = [
   {

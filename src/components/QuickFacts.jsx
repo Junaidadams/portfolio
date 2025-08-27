@@ -1,36 +1,55 @@
-import { useState } from 'react';
-import axios from 'axios'
-import { quickFacts } from '../constants';
-
+import { useState, useEffect } from "react";
+import axios from "axios";
+import { quickFacts } from "../../constants";
 
 const QuickFacts = () => {
-const [repositorys, setRepositories] = useState(null);    
+  const [repositories, setRepositories] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-    const fetchReopos = async () => {  
-        const response = await axios.get('https://api.github.com/users/Junaidadams');
-        console.log(response.data); 
-        setRepositories(response.data);
-    }
+  useEffect(() => {
+    const fetchRepos = async () => {
+      try {
+        const response = await axios.get(
+          "https://api.github.com/users/Junaidadams",
+        );
+        setRepositories(response.data.public_repos);
+      } catch (error) {
+        console.error("Error fetching repos:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchRepos();
+  }, []);
+
   return (
-    <section className="w-full py-10 bg-mainWhite dark:bg-[#0e0f0b]">
-      <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-6 px-6">
-        {quickFacts.map((fact) => (
-          <div
-            key={fact.key}
-            className="flex flex-col items-center text-center bg-white dark:bg-[#1a1a1a] shadow-md rounded-2xl p-4 transition hover:scale-105 hover:shadow-lg"
-          >
-            <div className="mb-2">{fact.icon}</div>
-            <h3 className="text-2xl font-bold text-black dark:text-white">
-              {fact.value}
-            </h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              {fact.name}
-            </p>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}
+    <div className="flex w-full">
+      <div className="text-mainBlack dark:text-mainWhite flex flex-col px-4 md:px-8">
+        <div>
+          {quickFacts.map(({ key, value, name }) => (
+            <div key={key} className="mb-2 flex flex-row">
+              <div className="flex w-40 text-center">
+                <h3 className="font-chillax font-semibold">{value}</h3>
+                <p className="font-chillax my-auto text-sm">{name}</p>
+              </div>
+            </div>
+          ))}
 
-export default QuickFacts
+          <div className="mb-2 flex flex-row">
+            <div className="flex w-40 text-center">
+              <h3 className="font-chillax font-semibold">
+                {loading ? "Loading..." : repositories + "+"}
+              </h3>
+              <p className="font-panchang my-auto text-xs tracking-tight">
+                GitHub Repositories
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default QuickFacts;

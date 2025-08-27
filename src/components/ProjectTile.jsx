@@ -5,7 +5,7 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { AnimatePresence, motion } from "framer-motion";
 import { BsChevronCompactUp } from "react-icons/bs";
 
-export const ProjectTile = () => {
+const ProjectTile = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const isProjectOrLink = ({ project }) => {
@@ -173,3 +173,5 @@ export const ProjectTile = () => {
     </div>
   );
 };
+
+export default ProjectTile;
