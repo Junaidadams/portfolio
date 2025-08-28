@@ -68,9 +68,9 @@ function App() {
           <p className="font-chillax mb-2 text-gray-700 dark:text-gray-300">
             Hi, I'm Junaid — a freelance web developer based in Cape Town, South
             Africa. With over two years of experience building modern web
-            applications, I specialize in full-stack
-            development. I focus on delivering high-quality, scalable, and
-            user-friendly solutions for clients.
+            applications, I specialize in full-stack development. I focus on
+            delivering high-quality, scalable, and user-friendly solutions for
+            clients.
           </p>
           <p className="font-chillax text-gray-700 dark:text-gray-300">
             I am currently completing a BSc in Modern Computer Science at OPIT
@@ -110,8 +110,9 @@ function App() {
             I’m currently open to freelance projects, collaborations, and
             full-time opportunities. Whether you’re a business looking for a new
             website, or a team in need of a developer, I’d love to hear from
-            you. Feel free to reach out through the form below or connect with
-            me on social media.
+            you. Feel free to reach out through the{" "}
+            <span className="font-semibold">form below</span> or connect with me
+            on social media.
           </p>
         </div>
         <ContactForm />

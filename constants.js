@@ -20,6 +20,10 @@ import { FaReact } from "react-icons/fa";
 import { DiDjango, DiMongodb, DiMysql, DiNodejs } from "react-icons/di";
 import { CiCoffeeBean } from "react-icons/ci";
 import { CgMusicSpeaker } from "react-icons/cg";
+import { GiChefToque } from "react-icons/gi";
+import { BiSolidCoffee } from "react-icons/bi";
+import { BsFillMusicPlayerFill } from "react-icons/bs";
+
 export const websiteInformation = [
   {
     name: "Junaid Adams",
@@ -74,13 +78,19 @@ export const quickFacts = [
     key: 1,
     name: "Coffee",
     value: "Iced Americano",
-    icon: CiCoffeeBean,
+    icon: BiSolidCoffee,
   },
   {
     key: 2,
     name: "Music",
     value: "Lots of genres",
-    icon: CgMusicSpeaker,
+    icon: BsFillMusicPlayerFill,
+  },
+  {
+    key: 3,
+    name: "Cooking",
+    value: "Experimenting",
+    icon: GiChefToque,
   },
 ];
 
