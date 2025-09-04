@@ -24,6 +24,10 @@ import { GiChefToque } from "react-icons/gi";
 import { BiSolidCoffee } from "react-icons/bi";
 import { BsFillMusicPlayerFill } from "react-icons/bs";
 
+import { PiCoffeeThin } from "react-icons/pi";
+import { PiSpeakerHifiThin } from "react-icons/pi";
+import { PiForkKnifeThin } from "react-icons/pi";
+
 export const websiteInformation = [
   {
     name: "Junaid Adams",
@@ -78,19 +82,19 @@ export const quickFacts = [
     key: 1,
     name: "Coffee",
     value: "Iced Americano",
-    icon: BiSolidCoffee,
+    icon: PiCoffeeThin,
   },
   {
     key: 2,
     name: "Music",
     value: "Lots of genres",
-    icon: BsFillMusicPlayerFill,
+    icon: PiSpeakerHifiThin,
   },
   {
     key: 3,
     name: "Cooking",
     value: "Experimenting",
-    icon: GiChefToque,
+    icon: PiForkKnifeThin,
   },
 ];
 

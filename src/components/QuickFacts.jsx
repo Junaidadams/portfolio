@@ -34,7 +34,8 @@ const QuickFacts = () => {
             <div key={key} className="mb-2 flex ">
               <div className="flex text-center flex-col">
                 <Icon className="text-2xl mb-1 mx-auto" />
-                <h3 className="font-chillax font-semibold">{name}</h3>
+                <h3 className="font-panchang font-semibold">{name}</h3>
+                <p className="font-chillax">{value}</p>
                 {/* <p className="font-chillax my-auto text-sm">{value}</p> */}
               </div>
             </div>

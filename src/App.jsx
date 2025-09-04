@@ -73,9 +73,15 @@ function App() {
             clients.
           </p>
           <p className="font-chillax text-gray-700 dark:text-gray-300">
-            I am currently completing a BSc in Modern Computer Science at OPIT
-            (Open Institute of Technology) to further strengthen my technical
-            foundation.
+            I am currently completing a{" "}
+            <a
+              className="text-gray-900 underline dark:text-mainWhite"
+              href="https://www.opit.com/courses/computer-science-bachelor/"
+            >
+              BSc in Modern Computer Science at OPIT (Open Institute of
+              Technology)
+            </a>{" "}
+            to further strengthen my technical foundation.
           </p>
         </div>
         <QuickFacts />

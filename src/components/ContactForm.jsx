@@ -40,6 +40,8 @@ const ContactForm = () => {
         success: true,
         error: "",
       });
+
+      console.log("Message sent successfully");
       // Optionally clear form
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
@@ -48,6 +50,7 @@ const ContactForm = () => {
         success: false,
         error: "Failed to send message. Please try again later.",
       });
+      console.error("Error sending message:", error);
     }
   };
 
