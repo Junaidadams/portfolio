@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { quickFacts } from "../../constants";
+import { motion } from "framer-motion";
 
 const QuickFacts = () => {
   const [repositories, setRepositories] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [activeIndex, setActiveIndex] = useState(1);
 
   useEffect(() => {
     const fetchRepos = async () => {
@@ -27,30 +29,52 @@ const QuickFacts = () => {
     <div className="flex w-full">
       <div className="text-mainBlack dark:text-mainWhite flex flex-col px-4 md:px-8">
         <h3 className="font font-panchang dark:text-mainWhite text-left">
-          Things that I like
+          A few of my favorite things:
         </h3>
-        <div className="flex flex-row flex-wrap gap-6 mt-4">
-          {quickFacts.map(({ key, value, name, icon: Icon }) => (
-            <div key={key} className="mb-2 flex ">
-              <div className="flex text-center flex-col">
-                <Icon className="text-2xl mb-1 mx-auto" />
-                <h3 className="font-panchang font-semibold">{name}</h3>
-                <p className="font-chillax">{value}</p>
-                {/* <p className="font-chillax my-auto text-sm">{value}</p> */}
-              </div>
-            </div>
-          ))}
+        <div className="grid grid-cols-2 gap-1 sm:grid-cols-2 md:grid-cols-3">
+          {quickFacts.map(
+            ({
+              key,
+              value,
+              name,
+              icon: Icon,
+              animationIcon: AnimationIcon,
+            }) => (
+              <div
+                key={key}
+                onClick={() =>
+                  setActiveIndex((prev) => (prev === key ? null : key))
+                }
+                className={`border-mainBlack dark:border-mainWhite flex cursor-pointer flex-col border p-1 transition duration-500 md:p-3 ${
+                  activeIndex === key
+                    ? "bg-mainBlack dark:bg-mainWhite text-mainWhite dark:text-mainBlack"
+                    : "text-mainBlack dark:text-mainWhite"
+                }`}
+              >
+                <div className="flex">
+                  <Icon className="h-6 w-5" />
+                  {activeIndex === key && (
+                    <motion.div
+                      initial={{ y: 0 }}
+                      animate={{ y: [0, -1, 0] }} // bounce up a little
+                      transition={{
+                        duration: 0.9, // time for one bounce cycle
+                        repeat: Infinity, // loop forever
+                        repeatType: "loop", // continuous loop
+                        ease: "easeInOut",
+                      }}
+                      className="h-6 w-5"
+                    >
+                      <AnimationIcon />
+                    </motion.div>
+                  )}
+                </div>
 
-          {/* <div className="mb-2 flex flex-row">
-            <div className="flex w-40 text-center">
-              <h3 className="font-chillax font-semibold">
-                {loading ? "Loading..." : repositories + "+"}
-              </h3>
-              <p className="font-panchang my-auto text-xs tracking-tight">
-                GitHub Repositories
-              </p>
-            </div>
-          </div> */}
+                <h3 className="font-panchang text-xs tracking-tight">{name}</h3>
+                <p className="font-chillax text-xs">{value}</p>
+              </div>
+            )
+          )}
         </div>
       </div>
     </div>

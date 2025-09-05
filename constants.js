@@ -7,8 +7,6 @@ import weatherImage from "/projects/weather.png";
 import nikeImage from "/projects/nike.png";
 import newsletterclubImage from "/projects/newsletterclub.png";
 import roob from "/projects/roob.png";
-import { FaCode, FaCheckCircle, FaTools, FaSmile } from "react-icons/fa";
-import { MdWork } from "react-icons/md";
 
 import { SiPassport, SiVite } from "react-icons/si";
 import { SiNextdotjs, SiSanity } from "react-icons/si";
@@ -21,6 +19,15 @@ import { DiDjango, DiMongodb, DiMysql, DiNodejs } from "react-icons/di";
 import { CiCoffeeBean } from "react-icons/ci";
 import { CgMusicSpeaker } from "react-icons/cg";
 import { GiChefToque } from "react-icons/gi";
+import { PiPencilLineThin } from "react-icons/pi";
+import { PiGameControllerThin } from "react-icons/pi";
+import { CgGym } from "react-icons/cg";
+import { CgLoadbarSound } from "react-icons/cg";
+import { PiCoffeeBeanThin } from "react-icons/pi";
+import { PiBowlFoodThin } from "react-icons/pi";
+import { AiOutlinePicture } from "react-icons/ai";
+import { GiWeightLiftingUp } from "react-icons/gi";
+
 import { BiSolidCoffee } from "react-icons/bi";
 import { BsFillMusicPlayerFill } from "react-icons/bs";
 
@@ -83,18 +90,35 @@ export const quickFacts = [
     name: "Coffee",
     value: "Iced Americano",
     icon: PiCoffeeThin,
+    animationIcon: PiCoffeeBeanThin,
   },
   {
     key: 2,
     name: "Music",
     value: "Lots of genres",
     icon: PiSpeakerHifiThin,
+    animationIcon: CgLoadbarSound,
   },
   {
     key: 3,
     name: "Cooking",
     value: "Experimenting",
     icon: PiForkKnifeThin,
+    animationIcon: PiBowlFoodThin,
+  },
+  {
+    key: 4,
+    name: "Drawing",
+    value: "Pencil & Digital",
+    icon: PiPencilLineThin,
+    animationIcon: AiOutlinePicture,
+  },
+  {
+    key: 5,
+    name: "Exercise",
+    value: "Running & Gym",
+    icon: CgGym,
+    animationIcon: GiWeightLiftingUp,
   },
 ];
 

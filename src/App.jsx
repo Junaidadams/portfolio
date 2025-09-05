@@ -66,11 +66,13 @@ function App() {
             Summary
           </h3>
           <p className="font-chillax mb-2 text-gray-700 dark:text-gray-300">
-            Hi, I'm Junaid — a freelance web developer based in Cape Town, South
-            Africa. With over two years of experience building modern web
-            applications, I specialize in full-stack development. I focus on
-            delivering high-quality, scalable, and user-friendly solutions for
-            clients.
+            Hi, I'm Junaid — a freelance web developer based in{" "}
+            <span className="text-gray-900  dark:text-mainWhite">
+              Cape Town, South Africa.
+            </span>{" "}
+            With over two years of experience building modern web applications,
+            I specialize in full-stack development. I focus on delivering
+            high-quality, scalable, and user-friendly solutions for clients.
           </p>
           <p className="font-chillax text-gray-700 dark:text-gray-300">
             I am currently completing a{" "}
