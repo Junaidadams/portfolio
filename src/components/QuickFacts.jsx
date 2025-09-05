@@ -40,7 +40,7 @@ const QuickFacts = () => {
               icon: Icon,
               animationIcon: AnimationIcon,
             }) => (
-              <div
+              <motion.div
                 key={key}
                 onClick={() =>
                   setActiveIndex((prev) => (prev === key ? null : key))
@@ -56,9 +56,9 @@ const QuickFacts = () => {
                   {activeIndex === key && (
                     <motion.div
                       initial={{ y: 0 }}
-                      animate={{ y: [0, -1, 0] }} // bounce up a little
+                      animate={{ y: [0, -2, 0], rotateY: 180 }} // bounce up a little
                       transition={{
-                        duration: 0.9, // time for one bounce cycle
+                        duration: 0.7, // time for one bounce cycle
                         repeat: Infinity, // loop forever
                         repeatType: "loop", // continuous loop
                         ease: "easeInOut",
@@ -72,7 +72,7 @@ const QuickFacts = () => {
 
                 <h3 className="font-panchang text-xs tracking-tight">{name}</h3>
                 <p className="font-chillax text-xs">{value}</p>
-              </div>
+              </motion.div>
             )
           )}
         </div>

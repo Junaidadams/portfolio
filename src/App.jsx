@@ -45,9 +45,7 @@ function App() {
         <GlassesIcon />
         <div className="font-panchang text-mainBlack dark:bg-mainBlack dark:text-mainWhite w-fit rounded-r-3xl p-4 text-3xl font-extralight sm:p-6 md:px-8 md:text-4xl">
           <h2>Projects</h2>
-          <p className="text-base font-semibold">
-            A selection of my recent work in full-stack development.
-          </p>
+          <p className="text-base font-semibold">Recent work.</p>
         </div>
         <ProjectTile />
       </SectionWrapper>
@@ -74,8 +72,33 @@ function App() {
             I specialize in full-stack development. I focus on delivering
             high-quality, scalable, and user-friendly solutions for clients.
           </p>
+        </div>
+        <QuickFacts />
+      </SectionWrapper>
+
+      {/* TECH STACK SECTION */}
+      <SectionWrapper id="techstack">
+        <GlassesIcon />
+        <div className="font-panchang text-mainBlack dark:bg-mainBlack dark:text-mainWhite w-fit rounded-r-3xl p-4 text-3xl font-extralight sm:p-6 md:px-8 md:text-4xl">
+          <h2 className="font font-panchang dark:text-mainWhite text-left">
+            Tech Stack
+          </h2>
+          <p className="text-base font-semibold"> Technologies I work with.</p>
+        </div>
+        <div className="mb-3 px-4 md:px-8 xl:max-w-2/3">
+          <h3 className="font font-panchang dark:text-mainWhite text-left">
+            My stack
+          </h3>{" "}
           <p className="font-chillax text-gray-700 dark:text-gray-300">
-            I am currently completing a{" "}
+            Many of the techonologies listed here were initially learned during
+            my bootcamp with{" "}
+            <a
+              href="https://www.schoolofit.co.za/"
+              className="text-gray-900 underline dark:text-mainWhite"
+            >
+              Schoolof IT
+            </a>{" "}
+            and then expanded upon on my own. I am currently completing a{" "}
             <a
               className="text-gray-900 underline dark:text-mainWhite"
               href="https://www.opit.com/courses/computer-science-bachelor/"
@@ -85,16 +108,6 @@ function App() {
             </a>{" "}
             to further strengthen my technical foundation.
           </p>
-        </div>
-        <QuickFacts />
-      </SectionWrapper>
-      <SectionWrapper id="techstack">
-        <GlassesIcon />
-        <div className="font-panchang text-mainBlack dark:bg-mainBlack dark:text-mainWhite w-fit rounded-r-3xl p-4 text-3xl font-extralight sm:p-6 md:px-8 md:text-4xl">
-          <h2 className="font font-panchang dark:text-mainWhite text-left">
-            Tech Stack
-          </h2>
-          <p className="text-base font-semibold"> Technologies I work with.</p>
         </div>
         <TechStack />
       </SectionWrapper>
