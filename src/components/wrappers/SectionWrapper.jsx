@@ -14,7 +14,7 @@ const SectionWrapper = ({ id, extraStyling, children }) => {
           duration: 1,
           x: { duration: 1 },
         }}
-        className="w-full h-full overflow-auto border-black border-[1px] flex flex-col dark:border-mainWhite rounded-sm relative xl:p-6 2xl:p-7"
+        className="w-full h-full overflow-auto border-black border-[1px] flex flex-col dark:border-mainWhite relative xl:p-6 2xl:p-7"
       >
         {children}
       </motion.div>
