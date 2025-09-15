@@ -55,7 +55,7 @@ const ProjectTile = () => {
           <div key={project.key} className="mx mb-3 md:mb-4 2xl:mb-5">
             <button
               onClick={() => toggleAccordion(index)}
-              className="font font-panchang dark:text-mainWhite text-left text-sm hover:cursor-pointer sm:text-base"
+              className="font font-panchang dark:text-mainWhite text-left text-sm hover:cursor-pointer hover:text-gray-500 dark:hover:text-gray-300 sm:text-base"
             >
               {project.name}
             </button>
