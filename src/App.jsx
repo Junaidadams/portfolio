@@ -13,7 +13,7 @@ import GlassesIcon from "./components/Glasses";
 
 function App() {
   return (
-    <main className="bg-mainWhite dark:bg-mainBlack flex flex-col space-y-[62px] md:space-y-[80px]">
+    <main className="bg-mainWhite dark:bg-mainBlack flex flex-col space-y-[62px] md:space-y-[80px] scroll-smooth">
       {/* HERO SECTION */}
       <section
         id="home"

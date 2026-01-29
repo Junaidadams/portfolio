@@ -125,14 +125,30 @@ export const quickFacts = [
 export const projects = [
   {
     key: "1",
+    name: "Eat Halal",
+    shortDesc:
+      "Cape Town's own halal food directory service - helping users find nearby tasty spots.",
+    longDesc:
+      "Cape Town's own halal food directory service - helping users find nearby tasty spots while also helping businesses market their delicious food to waiting customers. Eat Halal's main focus is representing and respecting the food culture that gives it its platform.",
+    img: roob,
+    bgColor: "#fff",
+    link: "",
+    github: "https://github.com/Junaidadams/halaal-hub",
+    tags: [
+      { key: 1, name: "Vite", icon: SiVite },
+      { key: 2, name: "Express", icon: SiExpress },
+    ],
+  },
+  {
+    key: "2",
     name: "roob online",
     shortDesc:
       "A cosy, inviting website showcasing the commission pieces made by roob the digital artist.",
     longDesc:
-      "A cosy, inviting website showcasing the commission pieces made by roob the digital artist. Complete with it's own CMS and contact form, this website is what I recommend for customers in  similar service-related fields",
+      "A cosy, inviting website showcasing the commission pieces made by roob the digital artist. Complete with it's own CMS and contact form, this website is what I recommend for customers in  similar service-related fields.",
     img: roob,
     bgColor: "#fff",
-    link: "https://roob.online/",
+    link: "",
     github: "https://github.com/Junaidadams/roob",
     tags: [
       { key: 1, name: "Vite", icon: SiVite },
@@ -140,7 +156,7 @@ export const projects = [
     ],
   },
   {
-    key: "2",
+    key: "3",
     name: "The Newsletter Club",
     shortDesc:
       "A full-stack newsletter growth platform, aimed at collaboration between newsletter owners.",
@@ -148,7 +164,7 @@ export const projects = [
       "An exclusive platform for newsletter owners to find and collaborate with other newsletter creators. The website features a comprehensive directory to search by category, monetization type, subscriber count, and more. This has been my first freelance project of this scale, and it was a delight to build from beginning to end.",
     img: newsletterclubImage,
     bgColor: "#7c3aed ",
-    link: "https://thenewsletterclub.co",
+    link: "",
     github: "https://github.com/TheNEwsletterclub/newlsetterclubbackend",
     tags: [
       { key: 1, name: "Vite", icon: SiVite },
@@ -156,7 +172,7 @@ export const projects = [
     ],
   },
   {
-    key: "3",
+    key: "4",
     name: "Trident Distributions",
     shortDesc:
       "A beautifully designed e-commerce website with account creation and a persistent local storage cart system.",
@@ -173,7 +189,7 @@ export const projects = [
     ],
   },
   {
-    key: "4",
+    key: "5",
     name: "Weather Application",
     shortDesc:
       "A responsive weather web application capable of displaying weather information for an inputted city.",
@@ -187,7 +203,7 @@ export const projects = [
     tags: [{ key: 1, name: "Vite", icon: SiVite }],
   },
   {
-    key: "5",
+    key: "6",
     name: "Junaid Adams - Past Portfolio",
     shortDesc:
       "A previous version of my portfolio. Modern aesthetics with a softer, personal touch.",
@@ -204,7 +220,7 @@ export const projects = [
     ],
   },
   {
-    key: "6",
+    key: "7",
     name: "One to Ten",
     shortDesc:
       "A sleek, minimalist quiz game, perfect for quick entertainment and challenging your quick-thinking skills!",
@@ -218,7 +234,7 @@ export const projects = [
     tags: [{ key: 1, name: "Vite", icon: SiVite }],
   },
   {
-    key: "7",
+    key: "8",
     name: "Nike Mock Website",
     shortDesc:
       "A sleek Nike mock website made using Vite, with a mobile-first responsive design.",
