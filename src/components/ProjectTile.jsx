@@ -160,7 +160,7 @@ const ProjectTile = () => {
                       onClick={() => toggleAccordion(index)}
                       className="hover text-left hover:cursor-pointer"
                     >
-                      <BsChevronCompactUp className="mx-auto" />
+                      <BsChevronCompactUp className="mx-auto animate-bounce" />
                     </button>
                   </motion.div>
                 </motion.div>

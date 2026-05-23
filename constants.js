@@ -123,9 +123,25 @@ export const quickFacts = [
 ];
 
 export const projects = [
+   {
+    key: "10",
+    name: "* WBWR - Frontend Dev",
+    shortDesc:
+      "Frontend Dev at Webwiser Cape Town. Building in Shopify Hydrogen and Liquid, React and React Native.",
+    longDesc:
+      "Frontend Dev at Webwiser Cape Town. Building in Shopify Hydrogen and Liquid as well as React and React Native. Company websites I have worked on include Vans, Hi-Tec, Big Blue among others. Working closely with designers to build beautiful UI.",
+    img: roob,
+    bgColor: "#fff",
+    link: "",
+    github: "",
+    tags: [
+      { key: 1, name: "Vite", icon: SiVite },
+      { key: 2, name: "Express", icon: SiExpress },
+    ],
+  },
   {
     key: "1",
-    name: "Eat Halal",
+    name: "Eat Halal (Q1 2027)",
     shortDesc:
       "Cape Town's own halal food directory service - helping users find nearby tasty spots.",
     longDesc:
@@ -188,67 +204,67 @@ export const projects = [
       { key: 3, name: "Sanity.io", icon: SiSanity },
     ],
   },
-  {
-    key: "5",
-    name: "Weather Application",
-    shortDesc:
-      "A responsive weather web application capable of displaying weather information for an inputted city.",
-    longDesc:
-      "A highly responsive weather web application has been developed with the capability to showcase detailed weather information for a user-inputted city. The application ensures a user-friendly experience by providing comprehensive weather details with accuracy and efficiency.",
-    img: weatherImage,
-    bgColor: "#a396e9",
+  // {
+  //   key: "5",
+  //   name: "Weather Application",
+  //   shortDesc:
+  //     "A responsive weather web application capable of displaying weather information for an inputted city.",
+  //   longDesc:
+  //     "A highly responsive weather web application has been developed with the capability to showcase detailed weather information for a user-inputted city. The application ensures a user-friendly experience by providing comprehensive weather details with accuracy and efficiency.",
+  //   img: weatherImage,
+  //   bgColor: "#a396e9",
 
-    link: "https://codesandbox.io/p/sandbox/weather-app-fpv85k",
-    github: "https://github.com/Junaidadams/Weather-App",
-    tags: [{ key: 1, name: "Vite", icon: SiVite }],
-  },
-  {
-    key: "6",
-    name: "Junaid Adams - Past Portfolio",
-    shortDesc:
-      "A previous version of my portfolio. Modern aesthetics with a softer, personal touch.",
-    longDesc:
-      "A past version of my portfolio, distinguished by its modern aesthetics and infused with a softer, more personal touch, was crafted to reflect a balance between contemporary design elements. The deliberate incorporation of a personal touch aimed to create a unique and inviting online presence, catering to a visually appealing and engaging user experience.",
-    img: junaidImage,
-    bgColor: "#f5f5f5",
+  //   link: "https://codesandbox.io/p/sandbox/weather-app-fpv85k",
+  //   github: "https://github.com/Junaidadams/Weather-App",
+  //   tags: [{ key: 1, name: "Vite", icon: SiVite }],
+  // },
+  // {
+  //   key: "6",
+  //   name: "Junaid Adams - Past Portfolio",
+  //   shortDesc:
+  //     "A previous version of my portfolio. Modern aesthetics with a softer, personal touch.",
+  //   longDesc:
+  //     "A past version of my portfolio, distinguished by its modern aesthetics and infused with a softer, more personal touch, was crafted to reflect a balance between contemporary design elements. The deliberate incorporation of a personal touch aimed to create a unique and inviting online presence, catering to a visually appealing and engaging user experience.",
+  //   img: junaidImage,
+  //   bgColor: "#f5f5f5",
 
-    link: "",
-    github: "",
-    tags: [
-      { key: 1, name: "Vite", icon: SiVite },
-      { key: 2, name: "ThreeJS", icon: TbBrandThreejs },
-    ],
-  },
-  {
-    key: "7",
-    name: "One to Ten",
-    shortDesc:
-      "A sleek, minimalist quiz game, perfect for quick entertainment and challenging your quick-thinking skills!",
-    longDesc:
-      "Introducing a quiz game where all answers range from one to ten. Designed with a minimalist, sleek interface, it offers simple and engaging gameplay. Perfect for passing the time, this game provides an enjoyable way to challenge your quick-thinking skills. Dive in and have fun whenever you have a few moments to spare!",
-    img: oneToTenImage,
-    bgColor: "#182421",
+  //   link: "",
+  //   github: "",
+  //   tags: [
+  //     { key: 1, name: "Vite", icon: SiVite },
+  //     { key: 2, name: "ThreeJS", icon: TbBrandThreejs },
+  //   ],
+  // },
+  // {
+  //   key: "7",
+  //   name: "One to Ten",
+  //   shortDesc:
+  //     "A sleek, minimalist quiz game, perfect for quick entertainment and challenging your quick-thinking skills!",
+  //   longDesc:
+  //     "Introducing a quiz game where all answers range from one to ten. Designed with a minimalist, sleek interface, it offers simple and engaging gameplay. Perfect for passing the time, this game provides an enjoyable way to challenge your quick-thinking skills. Dive in and have fun whenever you have a few moments to spare!",
+  //   img: oneToTenImage,
+  //   bgColor: "#182421",
 
-    link: "https://www.1210.co.za",
-    github: "https://github.com/Junaidadams/One-to-Ten",
-    tags: [{ key: 1, name: "Vite", icon: SiVite }],
-  },
-  {
-    key: "8",
-    name: "Nike Mock Website",
-    shortDesc:
-      "A sleek Nike mock website made using Vite, with a mobile-first responsive design.",
-    longDesc:
-      "A sleek Nike mock website website made using Vite showcasing responsive design. This project was built during my time at School of IT and taught me what goes into making real-world product pages.",
-    img: nikeImage,
-    bgColor: "#fff",
-    link: "",
-    github: "",
-    tags: [
-      { key: 1, name: "Vite", icon: SiVite },
-      { key: 2, name: "Tailwind", icon: RiTailwindCssFill },
-    ],
-  },
+  //   link: "https://www.1210.co.za",
+  //   github: "https://github.com/Junaidadams/One-to-Ten",
+  //   tags: [{ key: 1, name: "Vite", icon: SiVite }],
+  // },
+  // {
+  //   key: "8",
+  //   name: "Nike Mock Website",
+  //   shortDesc:
+  //     "A sleek Nike mock website made using Vite, with a mobile-first responsive design.",
+  //   longDesc:
+  //     "A sleek Nike mock website website made using Vite showcasing responsive design. This project was built during my time at School of IT and taught me what goes into making real-world product pages.",
+  //   img: nikeImage,
+  //   bgColor: "#fff",
+  //   link: "",
+  //   github: "",
+  //   tags: [
+  //     { key: 1, name: "Vite", icon: SiVite },
+  //     { key: 2, name: "Tailwind", icon: RiTailwindCssFill },
+  //   ],
+  // },
 ];
 
 export const frontendTechnologies = [
