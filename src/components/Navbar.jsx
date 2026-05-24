@@ -14,7 +14,7 @@ const variants = {
     },
   }),
   closed: {
-    clipPath: "circle(30px at 40px 40px)",
+    clipPath: "circle(30px at 100% 40px)",
     transition: {
       delay: 0.01,
       type: "spring",
@@ -45,12 +45,11 @@ const Navbar = () => {
 
       {/* Toggle Button */}
 
-      <div className="md:hidden">
+      <div className="md:hidden ml-auto">
         <Toggle isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
       </div>
 
       {/* Mobile Menu */}
-
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -59,9 +58,9 @@ const Navbar = () => {
             exit="closed"
             variants={variants}
             transition={{ duration: 0.5 }}
-            className="bg-mainWhite dark:bg-mainBlack bg-opacity-95 border-b-mainWhite absolute top-0 left-0 z-30 flex w-full flex-col space-y-6 border pb-10 capitalize shadow-lg md:hidden"
+            className="bg-mainWhite dark:bg-mainBlack bg-opacity-95 border-b-mainWhite absolute top-0 right-0 z-30 flex w-full flex-col space-y-6 border pb-10 capitalize shadow-lg md:hidden"
           >
-            <div className="md:hidden">
+            <div className="md:hidden ml-auto">
               <Toggle isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
             </div>
             {navigationLinks.map((link) => (
