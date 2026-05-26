@@ -69,7 +69,7 @@ const Timeline = () => {
       <button
         type="button"
         onClick={prevMilestones}
-        className="dark:text-mainWhite text-mainBlack ml-1 w-10 h-10 "
+        className="dark:text-mainWhite text-mainBlack ml-1 w-10 h-10 cursor-pointer"
       >
         <BsChevronCompactUp className="" />
       </button>
@@ -93,17 +93,33 @@ const Timeline = () => {
                 )}
               </div>
               {/* Card */}
-              <div className="mb-5 dark:bg-mainBlack dark:text-mainWhite p-3 text-xs rounded-lg flex-1">
-                <p className="text-gray-400 text-[11px] mb-1">
-                  {info.year}
-                  {info.ended && ` – ${info.ended}`}
-                </p>
-                <div className="flex items-center gap-2 mb-1">
-                  <img className="w-6 h-auto" src={info.imgUrl} />
-                  <span className="text-gray-500">{info.institution}</span>
+              <div className="mb-5 dark:bg-mainBlack dark:text-mainWhite sm:gap-3 text-xs rounded-lg flex-1 flex">
+                {info.imgUrl && (
+                  <img
+                    className={`w-auto h-10 my-auto hidden sm:flex ${info.key == 1 && "dark:bg-mainWhite p-2.5"}`}
+                    src={info.imgUrl}
+                  />
+                )}
+
+                <div className="font-chillax">
+                  <p className="text-gray-400 font-satoshi text-[11px] mb-1 flex gap-1">
+                    {info.year}
+                    {info.ended ? ` – ${info.ended}` : <span>Ongoing</span>}
+                  </p>
+                  <div className="flex gap-1">
+                    <img
+                      className={`w-auto h-6 my-auto sm:hidden ${info.key == 1 && "dark:bg-mainWhite p-1"}`}
+                      src={info.imgUrl}
+                    />
+                    <div>
+                      <span className="text-mainBlack dark:text-mainWhite font-medium">
+                        {info.institution}
+                      </span>
+                      <h3 className="font-light mb-1">{info.name}</h3>
+                    </div>
+                  </div>
+                  <p>{info.desc}</p>
                 </div>
-                <h3 className="font-medium mb-1">{info.name}</h3>
-                <p>{info.desc}</p>
               </div>
             </div>
           ))}
@@ -119,7 +135,7 @@ const Timeline = () => {
       <button
         type="button"
         onClick={nextMilestones}
-        className="dark:text-mainWhite text-mainBlack ml-1 w-10 h-10 "
+        className="dark:text-mainWhite text-mainBlack ml-1 w-10 h-10 cursor-pointer"
       >
         <BsChevronCompactDown />
       </button>

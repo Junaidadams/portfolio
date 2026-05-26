@@ -8,6 +8,11 @@ import nikeImage from "/projects/nike.png";
 import newsletterclubImage from "/projects/newsletterclub.png";
 import roob from "/projects/roob.png";
 
+import schoolOfIt from "/icons/schoolofit.png";
+import glasses from "/icons/glasses.svg";
+import opit from "/icons/opit.webp";
+import wbwr from "/icons/wbwr.png";
+
 import { SiPassport, SiVite } from "react-icons/si";
 import { SiNextdotjs, SiSanity } from "react-icons/si";
 import { TbBrandThreejs } from "react-icons/tb";
@@ -271,46 +276,42 @@ export const backendTechnologies = [
 export const timelineInformation = [
   {
     key: 1,
-    type: "Education",
-    year: "2023",
-    ended: "2023",
-    institution: "School of IT",
-    name: "Full Stack Bootcamp",
-    imgUrl:
-      "https://www.schoolofit.co.za/wp-content/uploads/2026/01/cropped-file_000000004dd471f8baaa9fabd61fcfe4-scaled-2-scaled.png",
-    desc: "My first lines of code were written here. I quit my retail job after having saved in pursuit of switching fields.",
-  },
-  {
-    key: 2,
-    type: "Job",
-    year: "2023",
-    ended: "2026",
-    institution: "Self-employed",
-    name: "Freelance Web Dev",
-    imgUrl:
-      "https://www.schoolofit.co.za/wp-content/uploads/2026/01/cropped-file_000000004dd471f8baaa9fabd61fcfe4-scaled-2-scaled.png",
-    desc: "During this period, I make quite a few freelance projects. This was a very informative experience and I really learnt what it takes to be an entire solution in one person.",
-  },
-  {
-    key: 3,
-    type: "Education",
-    year: "2025",
-    ended: "",
-    institution: "Open Institute of Technology",
-    name: "BSc(hons) Computer Science",
-    imgUrl:
-      "https://www.schoolofit.co.za/wp-content/uploads/2026/01/cropped-file_000000004dd471f8baaa9fabd61fcfe4-scaled-2-scaled.png",
-    desc: "I started my degree through OPIT to better my job suitability and to pursue deeper knowledge and understanding into my chosen field.",
-  },
-  {
-    key: 4,
     type: "Job",
     year: "2026",
     ended: "",
     institution: "WBWR Digital Experiences",
     name: "Frontend Dev",
-    imgUrl:
-      "https://www.schoolofit.co.za/wp-content/uploads/2026/01/cropped-file_000000004dd471f8baaa9fabd61fcfe4-scaled-2-scaled.png",
+    imgUrl: wbwr,
     desc: "My first position in the field. Building, updating and fixing sites using a wide stack including Shopify Hydrogen/Liquid, React and React Native.",
+  },
+  {
+    key: 2,
+    type: "Education",
+    year: "2025",
+    ended: "",
+    institution: "Open Institute of Technology",
+    name: "BSc(hons) Computer Science",
+    imgUrl: opit,
+    desc: "I started my degree through OPIT to better my job suitability and to pursue deeper knowledge and understanding into my chosen field.",
+  },
+  {
+    key: 3,
+    type: "Job",
+    year: "2023",
+    ended: "2026",
+    institution: "Self-employed",
+    name: "Freelance Web Dev",
+    imgUrl: glasses,
+    desc: "During this period, I make quite a few freelance projects. This was a very informative experience and I really learnt what it takes to be an entire solution in one person.",
+  },
+  {
+    key: 4,
+    type: "Education",
+    year: "2023",
+    ended: "2023",
+    institution: "School of IT",
+    name: "Full Stack Bootcamp",
+    imgUrl: schoolOfIt,
+    desc: "My first lines of code were written here. I quit my retail job after having saved in pursuit of switching fields.",
   },
 ];
