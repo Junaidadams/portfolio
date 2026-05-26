@@ -33,7 +33,7 @@ const ContactForm = () => {
     try {
       await axios.post(
         "https://mail-server-6sjb.onrender.com/api/mail/portfolio-contact",
-        formData
+        formData,
       );
       setSubmissionState({
         loading: false,
@@ -56,16 +56,13 @@ const ContactForm = () => {
 
   return (
     <div className="flex w-full">
-      <div className="flex flex-col px-4 md:px-8">
+      <div className="flex flex-col">
         <form
           onSubmit={handleSubmit}
           className="text-mainBlack dark:text-mainWhite flex flex-col"
         >
           <div className="flex flex-col md:flex-row md:space-x-3">
             <div className="mb-4 flex flex-col">
-              {/* <label htmlFor="name" className="font-panchang">
-                Name{" "}
-              </label> */}
               <input
                 onChange={handleChange}
                 value={formData.name}
@@ -74,13 +71,10 @@ const ContactForm = () => {
                 id="name"
                 name="name"
                 required
-                className="focus:bg-mainBlack dark:focus:bg-mainWhite focus:text-mainWhite dark:focus:text-mainBlack font-chillax selection:bg-mainBlack selection:text-mainWhite dark:selection:bg-mainWhite dark:selection:text-mainBlack border-r border-b p-1 transition duration-200 focus:outline-none placeholder:text-mainBlack placeholder:dark:text-mainWhite"
+                className="focus:bg-mainBlack dark:focus:bg-mainWhite focus:text-mainWhite dark:focus:text-mainBlack font-chillax selection:bg-mainBlack selection:text-mainWhite dark:selection:bg-mainWhite dark:selection:text-mainBlack border-b p-1 transition duration-200 focus:outline-none placeholder:text-mainBlack placeholder:dark:text-mainWhite"
               />
             </div>
             <div className="mb-4 flex flex-col">
-              {/* <label htmlFor="email" className="font-panchang">
-                Email{" "}
-              </label> */}
               <input
                 onChange={handleChange}
                 value={formData.email}
@@ -89,14 +83,11 @@ const ContactForm = () => {
                 id="email"
                 name="email"
                 required
-                className="focus:bg-mainBlack dark:focus:bg-mainWhite focus:text-mainWhite dark:focus:text-mainBlack font-chillax dark:selection:bg-mainBlack dark:selection:text-mainWhite selection:bg-mainWhite selection:text-mainBlack border-r border-b p-1 transition duration-200 focus:outline-none placeholder:text-mainBlack placeholder:dark:text-mainWhite"
+                className="focus:bg-mainBlack dark:focus:bg-mainWhite focus:text-mainWhite dark:focus:text-mainBlack font-chillax dark:selection:bg-mainBlack dark:selection:text-mainWhite selection:bg-mainWhite selection:text-mainBlack border-b p-1 transition duration-200 focus:outline-none placeholder:text-mainBlack placeholder:dark:text-mainWhite"
               />
             </div>
           </div>
           <div className="mb-4 flex flex-col">
-            {/* <label htmlFor="message" className="font-panchang">
-              Message{" "}
-            </label> */}
             <textarea
               onChange={handleChange}
               value={formData.message}
@@ -104,7 +95,7 @@ const ContactForm = () => {
               id="message"
               name="message"
               required
-              className="focus:bg-mainBlack dark:focus:bg-mainWhite focus:text-mainWhite dark:focus:text-mainBlack font-chillax selection:bg-mainBlack selection:text-mainWhite dark:selection:bg-mainWhite dark:selection:text-mainBlack border-r border-b p-1 transition duration-200 focus:outline-none placeholder:text-mainBlack placeholder:dark:text-mainWhite"
+              className="focus:bg-mainBlack dark:focus:bg-mainWhite focus:text-mainWhite dark:focus:text-mainBlack font-chillax selection:bg-mainBlack selection:text-mainWhite dark:selection:bg-mainWhite dark:selection:text-mainBlack border-b p-1 transition duration-200 focus:outline-none placeholder:text-mainBlack placeholder:dark:text-mainWhite"
             />
           </div>
           <div className="mb-4 flex flex-col">

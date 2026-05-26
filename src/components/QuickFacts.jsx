@@ -37,7 +37,7 @@ const QuickFacts = () => {
     const fetchRepos = async () => {
       try {
         const response = await axios.get(
-          "https://api.github.com/users/Junaidadams"
+          "https://api.github.com/users/Junaidadams",
         );
         setRepositories(response.data.public_repos);
       } catch (error) {
@@ -52,7 +52,7 @@ const QuickFacts = () => {
 
   return (
     <div className="flex w-full">
-      <div className="text-mainBlack dark:text-mainWhite flex flex-col px-4 md:px-8">
+      <div className="text-mainBlack dark:text-mainWhite flex flex-col">
         <h3 className="font font-panchang dark:text-mainWhite text-left mb-1">
           A few of my favorite things:
         </h3>
@@ -114,7 +114,7 @@ const QuickFacts = () => {
                   <p className="font-chillax text-xs">{value[0]}</p>
                 )}
               </motion.div>
-            )
+            ),
           )}
         </div>
       </div>

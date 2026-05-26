@@ -38,7 +38,7 @@ const TechStack = () => {
 
   return (
     <div className="flex w-full">
-      <div className="flex flex-col px-4 md:px-8">
+      <div className="flex flex-col">
         <h1 className="font font-panchang dark:text-mainWhite text-left"></h1>
 
         {/* Frontend Button */}
