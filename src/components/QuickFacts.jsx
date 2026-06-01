@@ -53,10 +53,10 @@ const QuickFacts = () => {
   return (
     <div className="flex w-full">
       <div className="text-mainBlack dark:text-mainWhite flex flex-col">
-        <h3 className="font font-panchang dark:text-mainWhite text-left mb-1">
+        <h3 className="font font-panchang dark:text-mainWhite text-left mb-2">
           A few of my favorite things:
         </h3>
-        <div className="grid grid-cols-2 gap-1 sm:grid-cols-2 md:grid-cols-3">
+        <div className="grid grid-cols-2 gap-2 sm:grid-cols-2 md:grid-cols-3">
           {quickFacts.map(
             ({
               key,

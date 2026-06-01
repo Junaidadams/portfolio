@@ -43,7 +43,7 @@ const TechStack = () => {
 
         {/* Frontend Button */}
         <button
-          className={`font-panchang mb-1 px-2 py-1 text-left font-semibold hover:cursor-pointer ${
+          className={`font-panchang mb-2 px-2 py-1 text-left font-semibold hover:cursor-pointer ${
             activeCategory === "frontend"
               ? "bg-mainBlack text-mainWhite dark:bg-mainWhite dark:text-mainBlack"
               : "text-mainBlack dark:text-mainWhite"
@@ -64,7 +64,7 @@ const TechStack = () => {
               animate="open"
               exit="closed"
               variants={containerVariants}
-              className="grid grid-cols-2 gap-1 sm:grid-cols-2 md:grid-cols-3"
+              className="grid grid-cols-2 gap-2 sm:grid-cols-2 md:grid-cols-3"
             >
               {frontendTechnologies.map(
                 ({ key, name, shortDesc, img: Image }) => (
@@ -101,7 +101,7 @@ const TechStack = () => {
 
         {/* Backend Button */}
         <button
-          className={`font-panchang mb-1 px-2 py-1 text-left font-semibold hover:cursor-pointer ${
+          className={`font-panchang mb-2 px-2 py-1 text-left font-semibold hover:cursor-pointer ${
             activeCategory === "backend"
               ? "bg-mainBlack text-mainWhite dark:bg-mainWhite dark:text-mainBlack"
               : "text-mainBlack dark:text-mainWhite"
@@ -121,7 +121,7 @@ const TechStack = () => {
               animate="open"
               exit="closed"
               variants={containerVariants}
-              className="grid grid-cols-2 gap-1 sm:grid-cols-2 md:grid-cols-3"
+              className="grid grid-cols-2 gap-2 sm:grid-cols-2 md:grid-cols-3"
             >
               {backendTechnologies.map(
                 ({ key, name, shortDesc, img: Image }) => (
