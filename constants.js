@@ -71,19 +71,23 @@ export const navigationLinks = [
     name: "home",
     link: "#home",
   },
-
   {
     key: 2,
+    name: "milestones",
+    link: "#milestones",
+  },
+  {
+    key: 3,
     name: "projects",
     link: "#projects",
   },
   {
-    key: 3,
+    key: 4,
     name: "tech",
     link: "#techstack",
   },
   {
-    key: 4,
+    key: 5,
     name: "contact",
     link: "#contact",
   },

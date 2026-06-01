@@ -21,7 +21,7 @@ function App() {
       <SectionWrapper
         heading="Milestones"
         subHeading="Up till today."
-        id="work"
+        id="milestones"
       >
         <GlassesIcon />
         <Timeline />
