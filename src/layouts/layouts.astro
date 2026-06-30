@@ -1,0 +1,28 @@
+---
+import '../styles/global.css';
+
+const { title, description } = Astro.props;
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=panchang@200,300,400,500,600,700,800,1&f[]=chillax@200,300,400,500,600,700,1&f[]=satoshi@300,400&display=swap"
+      rel="stylesheet"
+    />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://junaidadams.com" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

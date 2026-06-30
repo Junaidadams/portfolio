@@ -1,0 +1,70 @@
+---
+interface Props {
+  id: string;
+  heading?: string;
+  subHeading?: string;
+  extraStyling?: string;
+}
+
+const {
+  id,
+  heading,
+  subHeading,
+  extraStyling = "",
+} = Astro.props;
+---
+
+<section
+  id={id}
+  class:list={[
+    extraStyling,
+    "bg-mainWhite dark:bg-[#0e0f0b] flex items-center justify-center px-[31px] md:px-[40px] h-[calc(100dvh-62px)] md:h-[calc(100vh-80px)]",
+  ]}
+>
+  <div
+    class="fade-section w-full h-full overflow-auto border border-black dark:border-mainWhite relative px-4 md:px-8 xl:p-6 2xl:p-7"
+  >
+    {
+      heading && (
+        <div class="font-panchang text-mainBlack dark:bg-mainBlack dark:text-mainWhite w-fit rounded-r-3xl py-4 text-3xl font-extralight sm:py-6 md:py-8 md:text-4xl">
+          <h2>{heading}</h2>
+          <p class="text-base font-semibold">{subHeading}</p>
+        </div>
+      )
+    }
+
+    <slot />
+  </div>
+</section>
+
+<style>
+  .fade-section {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+      opacity 700ms ease,
+      transform 700ms ease;
+  }
+
+  .fade-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+
+<script>
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        entry.target.classList.toggle("visible", entry.isIntersecting);
+      });
+    },
+    {
+      threshold: 0.2,
+    }
+  );
+
+  document.querySelectorAll(".fade-section").forEach((el) => {
+    observer.observe(el);
+  });
+</script>

@@ -1,0 +1,87 @@
+---
+import Layout from '../layouts/layouts.astro';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import Hero from '../components/Hero';
+import Timeline from '../components/Timeline';
+import ProjectTile from '../components/ProjectTile';
+import TechStack from '../components/TechStack';
+import QuickFacts from '../components/QuickFacts';
+import ContactForm from '../components/ContactForm';
+import SocialTiles from '../components/SocialTiles';
+import GlassesIcon from '../components/Glasses';
+import SectionWrapper from '../components/wrappers/SectionWrapper.astro';
+---
+
+<Layout
+  title="Junaid Adams — Web Developer"
+  description="Cape Town-based full-stack web developer specialising in modern web applications. Available for small projects and collaborations."
+>
+  <Navbar client:load />
+
+  <main class="bg-mainWhite dark:bg-mainBlack flex flex-col space-y-[62px] md:space-y-[80px] scroll-smooth">
+    <Hero client:load />
+
+    <SectionWrapper heading="Milestones" subHeading="Up till today." id="milestones">
+      <GlassesIcon client:visible />
+      <Timeline client:visible />
+    </SectionWrapper>
+
+    <SectionWrapper heading="Projects" subHeading="Recent works." id="projects">
+      <GlassesIcon client:visible />
+      <ProjectTile client:visible />
+    </SectionWrapper>
+
+    <SectionWrapper heading="About" subHeading="Who I am." id="about">
+      <GlassesIcon client:visible />
+      <div class="mb-3 xl:max-w-2/3">
+        <h3 class="font font-panchang dark:text-mainWhite text-left">Summary</h3>
+        <p class="font-chillax mb-2 text-gray-700 dark:text-gray-300">
+          Hi, I'm Junaid — a web developer based in{" "}
+          <span class="text-gray-900 dark:text-mainWhite">Cape Town, South Africa.</span>{" "}
+          With over two years of experience building modern web applications, I specialise in
+          full-stack development. I focus on delivering high-quality, scalable, and user-friendly
+          solutions for clients.
+        </p>
+      </div>
+      <QuickFacts client:visible />
+    </SectionWrapper>
+
+    <SectionWrapper heading="Stack" subHeading="What I use" id="techstack">
+      <GlassesIcon client:visible />
+      <div class="mb-3 xl:max-w-2/3">
+        <h3 class="font font-panchang dark:text-mainWhite text-left">My stack</h3>
+        <p class="font-chillax text-gray-700 dark:text-gray-300">
+          Many of the technologies listed here were initially learned during my bootcamp with{" "}
+          <a href="https://www.schoolofit.co.za/" class="text-gray-900 underline dark:text-mainWhite">
+            School of IT
+          </a>{" "}
+          and then expanded upon on my own. I am currently completing a{" "}
+          <a
+            class="text-gray-900 underline dark:text-mainWhite"
+            href="https://www.opit.com/courses/computer-science-bachelor/"
+          >
+            BSc in Modern Computer Science at OPIT
+          </a>{" "}
+          to further strengthen my technical foundation.
+        </p>
+      </div>
+      <TechStack client:visible />
+    </SectionWrapper>
+
+    <SectionWrapper heading="Contact" subHeading="What I do." id="contact">
+      <GlassesIcon client:visible />
+      <div class="mb-5 xl:max-w-2/3">
+        <p class="font-chillax text-gray-700 dark:text-gray-300">
+          I am currently open to small projects/opportunities. Small stylistic projects are my
+          favourite and I would love to build yours. Feel free to reach out through the{" "}
+          <span class="font-semibold">form below</span> or connect with me on social media.
+        </p>
+      </div>
+      <ContactForm client:visible />
+      <SocialTiles client:visible />
+    </SectionWrapper>
+  </main>
+
+  <Footer />
+</Layout>
