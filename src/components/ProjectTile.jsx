@@ -114,9 +114,9 @@ const ProjectTile = () => {
                     </div>
                     <div className="hidden flex-col space-y-2 lg:flex">
                       {" "}
-                      <h1 className="font-panchang dark:text-mainWhite text-left text-sm">
+                      <h6 className="font-panchang dark:text-mainWhite text-left text-sm">
                         Built with:
-                      </h1>
+                      </h6>
                       {project.tags.map(({ key, name, icon: Icon }) => (
                         <span
                           key={key}
@@ -127,14 +127,16 @@ const ProjectTile = () => {
                       ))}
                       {isProjectOrLink({ project }) && (
                         <div className="mt-2 flex flex-col space-y-2">
-                          <h1 className="font-panchang dark:text-mainWhite text-left text-sm">
+                          <h6 className="font-panchang dark:text-mainWhite text-left text-sm">
                             Find here:
-                          </h1>
+                          </h6>
                           <div className="flex space-x-2">
                             {project.github && (
                               <a
                                 href={project.github}
                                 target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label={`View the ${project.name} repository here.`}
                                 className="dark:border-mainWhite dark:text-mainWhite border border-black px-2 py-1 text-xs"
                               >
                                 <FaGithub />
@@ -144,6 +146,8 @@ const ProjectTile = () => {
                               <a
                                 href={project.link}
                                 target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label={`View ${project.name} live here!`}
                                 className="dark:border-mainWhite dark:text-mainWhite border border-black px-2 py-1 text-xs"
                               >
                                 <FaExternalLinkAlt strokeWidth={1} />
