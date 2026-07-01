@@ -39,8 +39,6 @@ const TechStack = () => {
   return (
     <div className="flex w-full">
       <div className="flex flex-col">
-        <h1 className="font font-panchang dark:text-mainWhite text-left"></h1>
-
         {/* Frontend Button */}
         <button
           className={`font-panchang mb-2 px-2 py-1 text-left font-semibold hover:cursor-pointer ${

@@ -93,6 +93,8 @@ const ProjectTile = () => {
                             <a
                               href={project.github}
                               target="_blank"
+                              rel="noopener noreferrer"
+                              aria-label={`View the ${project.name} repository here.`}
                               className="dark:border-mainWhite dark:text-mainWhite border border-black px-2 py-1 text-xs"
                             >
                               <FaGithub />
