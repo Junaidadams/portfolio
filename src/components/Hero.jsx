@@ -16,9 +16,19 @@ const Hero = () => {
           x: { duration: 1 },
         }}
         alt="Background with abstract lines and scales pattern"
-        className="relative flex h-full w-full flex-col border border-black bg-[url(/lines.jpg)] bg-cover bg-center dark:border-white dark:bg-[url(/scales.jpg)]"
+        className="relative flex h-full w-full flex-col border border-black bg-[url(/lines.jpg)] bg-cover bg-center dark:border-white dark:bg-[url(/mount-fuji.jpg)]"
       >
-        <div className="font-panchang text-mainBlack bg-mainWhite dark:bg-mainBlack dark:text-mainWhite round border-y-mainBlack border-r-mainBlack border-l-mainWhite dark:border-y-mainWhite dark:border-r-mainWhite dark:border-l-mainBlack my-auto w-fit max-w-[260px] -translate-[1px] border p-2 text-xl font-light sm:max-w-1/2 sm:p-6 md:max-w-3/5 md:p-8 md:text-2xl lg:p-10">
+        <div className="font-panchang text-mainBlack bg-mainWhite dark:bg-mainBlack dark:text-mainWhite my-auto w-fit max-w-[260px] p-2 text-xl font-light sm:max-w-1/2 sm:p-6 md:max-w-3/5 md:p-8 md:text-2xl lg:p-10">
+          {" "}
+          <h1 className="">
+            Junaid Adams <br />
+            Dev Portfolio
+          </h1>
+          <p className="mt-2 text-sm font-extralight md:text-base">
+            Building user-focused websites
+          </p>
+        </div>
+        {/* <div className="font-panchang text-mainBlack bg-mainWhite dark:bg-mainBlack dark:text-mainWhite round border-y-mainBlack border-r-mainBlack border-l-mainWhite dark:border-y-mainWhite dark:border-r-mainWhite dark:border-l-mainBlack my-auto w-fit max-w-[260px] -translate-[1px] border p-2 text-xl font-light sm:max-w-1/2 sm:p-6 md:max-w-3/5 md:p-8 md:text-2xl lg:p-10">
           <h1 className="">
             Junaid Adams <br />
             Dev Portfolio
@@ -27,7 +37,7 @@ const Hero = () => {
           <p className="mt-2 text-sm font-extralight md:text-base">
             Building user-focused websites
           </p>
-        </div>
+        </div> */}
       </motion.div>
     </section>
   );
